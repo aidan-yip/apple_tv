@@ -7,7 +7,7 @@
 }
 
 body {
-  background-color: rgb(38, 38, 38);
+  background-color: rgba(255, 255, 255, 0.94);
 }
 
 #background {
@@ -132,7 +132,6 @@ img {
 #photos_img {
   width: 47%;
 }
-
 
 .app_icon:hover {
   cursor: pointer;
