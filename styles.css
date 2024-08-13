@@ -1,0 +1,102 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#background {
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  background-image: url(public/IMG_4463.jpeg);
+}
+
+img {
+  width: 60%;
+}
+
+#home_bar {
+  position: absolute;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 2%;
+  z-index: 1;
+  width: 95%;
+  height: 20%;
+  bottom: 0px;
+  background-color: rgba(255, 255, 255, 0.94);
+  box-shadow: 0px 0px 25px #1f1f1f3a;
+  border-radius: 45px;
+}
+
+.app_icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 16%;
+  height: 70%;
+  background-color: rgb(224, 224, 224);
+  box-shadow: 0px 0px 15px #1f1f1f20;
+  border-radius: 20px;
+  transition: ease-in-out;
+}
+
+#appstore {
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  background-color: rgb(123, 205, 255);
+}
+
+#facetime {
+  background-color: rgb(143, 238, 194);
+}
+
+#facetime_img {
+  width: 80%;
+}
+
+#settings {
+  background-color: rgb(170, 170, 170);
+}
+
+#settings_img {
+  width: 47%;
+  mix-blend-mode: color-burn;
+}
+
+#arcade {
+  background: linear-gradient(
+    0deg,
+    rgba(255, 149, 65, 1) 0%,
+    rgba(255, 80, 80, 1) 100%
+  );
+}
+
+#arcade_img {
+  width: 47%;
+}
+
+#photos {
+  background-color: rgb(255, 255, 255);
+}
+
+#photos_img {
+  width: 82%;
+}
+
+
+.app_icon:hover {
+  cursor: pointer;
+}

@@ -1,0 +1,23 @@
+/* Dark mode */
+@media (prefers-color-scheme: dark) {
+  .app_icon {
+    background-color: rgb(52, 52, 52);
+    box-shadow: 0px 0px 15px #e8e8e816;
+  }
+
+  #home_bar {
+    background-color: rgb(37, 37, 37);
+  }
+
+  #appstore {
+    background-color: rgb(0, 47, 82);
+  }
+
+  #facetime {
+    background-color: rgb(0, 67, 36);
+  }
+
+  #settings {
+    background-color: rgb(67, 67, 67);
+  }
+}
