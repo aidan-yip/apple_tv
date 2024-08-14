@@ -8,6 +8,7 @@ const instagram = document.getElementById("instagram");
 const twitter = document.getElementById("twitter");
 const facebook = document.getElementById("facebook");
 const google = document.getElementById("google");
+const home_bar = document.getElementById("home_bar");
 
 appstore.onclick = () => {
   location.href = "https://www.apple.com/ca/app-store/";
@@ -47,4 +48,24 @@ twitter.onclick = () => {
 
 google.onclick = () => {
   location.href = "https://www.google.com";
+};
+
+appstore.onmouseover = () => {
+  home_bar.style.borderTopLeftRadius = "30px";
+  home_bar.style.borderBottomLeftRadius = "30px";
+};
+
+appstore.onmouseleave = () => {
+  home_bar.style.borderTopLeftRadius = "45px";
+  home_bar.style.borderBottomLeftRadius = "45px";
+};
+
+arcade.onmouseover = () => {
+  home_bar.style.borderTopRightRadius = "30px";
+  home_bar.style.borderBottomRightRadius = "30px";
+};
+
+arcade.onmouseleave = () => {
+  home_bar.style.borderTopRightRadius = "45px";
+  home_bar.style.borderBottomRightRadius = "45px";
 };
