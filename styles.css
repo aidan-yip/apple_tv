@@ -81,7 +81,7 @@ img {
   grid-template-columns: 223px 223px 223px 223px 223px;
   grid-template-rows: 121px 121px 121px 121px 121px;
   overflow-y: scroll;
-  overflow-x: visible;
+  overflow-x: hidden;
   white-space: none;
 }
 
@@ -194,6 +194,10 @@ img {
 /* hover */
 
 .app_icon:hover {
+  cursor: pointer;
+}
+
+.app_icon_scroll:hover {
   cursor: pointer;
 }
 
