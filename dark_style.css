@@ -3,8 +3,9 @@
   body {
     background-color: rgb(38, 38, 38);
   }
-  
-  .app_icon, .app_icon_scroll  {
+
+  .app_icon,
+  .app_icon_scroll {
     background-color: rgb(52, 52, 52);
     box-shadow: 0px 0px 15px #e8e8e816;
   }
@@ -37,4 +38,17 @@
   #arcade {
     background: linear-gradient(0deg, rgb(133, 60, 0) 0%, rgb(117, 0, 0) 100%);
   }
+
+  #facebook {
+    background-color: #171717;
+  }
+
+  #youtube {
+    background-color: rgb(87, 0, 0);
+  }
+
+  #google {
+    background-color: #171717;
+  }
+
 }
