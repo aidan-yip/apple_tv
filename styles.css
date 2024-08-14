@@ -42,14 +42,13 @@ img {
   margin-bottom: 2%;
   z-index: 1;
   max-width: 1397px;
-
   max-height: 173px;
-
   width: 95%;
-  height: 20%;
+  height: 30%;
   background-color: rgba(255, 255, 255, 0.94);
   box-shadow: 0px 0px 25px #1f1f1f3a;
   border-radius: 45px;
+  transition: border-radius ease-in-out 0.3s;
 }
 
 .app_icon {
@@ -57,7 +56,7 @@ img {
   justify-content: center;
   align-items: center;
   width: 16%;
-  height: 77.5%;
+  height: 71%;
   background-color: rgb(224, 224, 224);
   box-shadow: 0px 0px 15px #1f1f1f20;
   border-radius: 20px;
@@ -79,7 +78,7 @@ img {
   gap: 56px;
   row-gap: 60px;
   grid-template-columns: 223px 223px 223px 223px 223px;
-  grid-template-rows: 121px 121px 121px 121px 121px;
+  grid-template-rows: 123px 123px 123px 123px 123px;
   overflow-y: scroll;
   overflow-x: hidden;
   white-space: none;
@@ -90,7 +89,7 @@ img {
   justify-content: center;
   align-items: center;
   max-width: 223px;
-  max-height: 121px;
+  max-height: 123px;
   width: 100%;
   height: 100%;
   background-color: rgb(224, 224, 224);
@@ -221,7 +220,7 @@ img {
     gap: 4%;
     row-gap: 5%;
     grid-template-columns: 20% 20% 20% 20% 20%;
-    grid-template-rows: 17% 17% 17% 17% 17%;
+    grid-template-rows: 18% 18% 18% 18% 18%;
   }
 
   .app_icon_scroll {
