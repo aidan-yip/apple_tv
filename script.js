@@ -1,14 +1,22 @@
+//Homebar
+
+const home_bar = document.getElementById("home_bar");
+
+//App icons
+
 const appstore = document.getElementById("appstore");
 const facetime = document.getElementById("facetime");
 const photos = document.getElementById("photos");
 const settings = document.getElementById("settings");
 const arcade = document.getElementById("arcade");
+
 const youtube = document.getElementById("youtube");
 const instagram = document.getElementById("instagram");
 const twitter = document.getElementById("twitter");
 const facebook = document.getElementById("facebook");
 const google = document.getElementById("google");
-const home_bar = document.getElementById("home_bar");
+
+const pq = document.getElementById("pq");
 
 appstore.onclick = () => {
   location.href = "https://www.apple.com/ca/app-store/";
@@ -49,6 +57,10 @@ twitter.onclick = () => {
 google.onclick = () => {
   location.href = "https://www.google.com";
 };
+
+pq.onclick = () => {
+  location.href = "https://perilous-quest.netlify.app";
+}
 
 appstore.onmouseover = () => {
   home_bar.style.borderTopLeftRadius = "30px";
