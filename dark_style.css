@@ -11,7 +11,7 @@
   }
 
   #home_bar {
-    background-color: rgba(38, 38, 38, 0.94);
+    background-color: rgba(38, 38, 38, 0.8);
   }
 
   #appstore {
@@ -48,6 +48,10 @@
   }
 
   #google {
+    background-color: #171717;
+  }
+
+  #pq {
     background-color: #171717;
   }
 
