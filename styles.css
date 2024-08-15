@@ -25,12 +25,6 @@ body {
   background-image: url(public/IMG_4463.jpeg);
 }
 
-img {
-  width: 60%;
-  overflow: hidden;
-  pointer-events: none;
-}
-
 #home_bar {
   position: sticky;
   top: 67%;
@@ -63,6 +57,20 @@ img {
   box-shadow: 0px 0px 15px #1f1f1f20;
   border-radius: 20px;
   transition: ease-in-out;
+
+  transform-style: preserve-3d;
+  transform: perspective(1000px);
+}
+
+img {
+  width: 60%;
+  overflow: hidden;
+  pointer-events: none;
+  transform: translateZ(20px)
+}
+
+#scroll_container > div {
+  
 }
 
 #scroll_container {
@@ -98,6 +106,8 @@ img {
   box-shadow: 0px 0px 15px #1f1f1f20;
   border-radius: 20px;
   transition: ease-in-out;
+  transform-style: preserve-3d;
+  transform: perspective(1000px);
 }
 
 #appstore {
