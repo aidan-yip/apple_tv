@@ -1,3 +1,5 @@
+"use strict";
+
 //Page body
 const body = document.body;
 
@@ -36,6 +38,7 @@ const pq = document.getElementById("pq");
 const color_input = document.getElementById("color_input");
 const brightness_range = document.getElementById("brightness_range");
 
+/*
 window.onscroll = function () {
   scrollFunction();
 };
@@ -47,6 +50,8 @@ function scrollFunction() {
     background.style.backdropFilter = "blur(0px)";
   }
 }
+*/
+
 
 //Brightness
 brightness_range.addEventListener("change", function (e) {
