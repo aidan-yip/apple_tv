@@ -20,6 +20,18 @@ const google = document.getElementById("google");
 
 const pq = document.getElementById("pq");
 
+window.onscroll = function () {
+  scrollFunction();
+};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 10 || document.documentElement.scrollTop > 10) {
+    background.style.backdropFilter = "blur(7px)";
+  } else {
+    background.style.backdropFilter = "blur(0px)";
+  }
+}
+
 appstore.onclick = () => {
   location.href = "https://www.apple.com/ca/app-store/";
 };
