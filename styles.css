@@ -13,6 +13,11 @@ body {
    width: 375px;        
 }
 
+#color_input {
+  width: 50%;
+  height: 60%;
+}
+
 #background {
   display: flex;
   justify-content: center;
