@@ -1,5 +1,7 @@
-//Homebar
+//Background
+const background = document.getElementById("background");
 
+//Homebar
 const home_bar = document.getElementById("home_bar");
 
 //App icons
@@ -60,11 +62,19 @@ google.onclick = () => {
 
 pq.onclick = () => {
   location.href = "https://perilous-quest.netlify.app";
-}
+};
 
+//app hover background changes
 appstore.onmouseover = () => {
   home_bar.style.borderTopLeftRadius = "30px";
   home_bar.style.borderBottomLeftRadius = "30px";
+  //icon
+  background.style.backgroundImage =
+    "url(public/app_icons/icons8-app-store-500.png)";
+  //Change background to accommodate icon
+  background.style.backgroundPosition = "top";
+  background.style.backgroundSize = "600px 600px";
+  background.style.backgroundColor = "#7bcdff";
 };
 
 appstore.onmouseleave = () => {
@@ -72,12 +82,61 @@ appstore.onmouseleave = () => {
   home_bar.style.borderBottomLeftRadius = "45px";
 };
 
+facetime.onmouseover = () => {
+  //icon
+  background.style.backgroundImage =
+    "url(public/app_icons/icons8-facetime-500.png)";
+  //Change background to accommodate icon
+  background.style.backgroundPosition = "top";
+  background.style.backgroundSize = "600px 600px";
+  background.style.backgroundColor = "rgb(143, 238, 194)";
+};
+
+photos.onmouseover = () => {
+  //icon
+  background.style.backgroundImage =
+    "url(public/app_icons/icons8-ios-photos-480.png)";
+  //Change background to accommodate icon
+  background.style.backgroundPosition = "top";
+  background.style.backgroundPositionY = "20%";
+  background.style.backgroundSize = "400px 400px";
+  background.style.backgroundColor = "rgb(240, 240, 240)";
+};
+
+settings.onmouseover = () => {
+  //icon
+  background.style.backgroundImage =
+    "url(public/app_icons/icons8-settings-480.png)";
+  //Change background to accommodate icon
+  background.style.backgroundPosition = "top";
+  background.style.backgroundPositionY = "20%";
+  background.style.backgroundSize = "400px 400px";
+  background.style.backgroundColor = "rgb(200, 200, 200)";
+};
+
 arcade.onmouseover = () => {
   home_bar.style.borderTopRightRadius = "30px";
   home_bar.style.borderBottomRightRadius = "30px";
+  //icon
+  background.style.backgroundImage =
+    "url(public/app_icons/icons8-apple-arcade-480.png)";
+  //Change background to accommodate icon
+  background.style.backgroundPosition = "top";
+  background.style.backgroundPositionY = "20%";
+  background.style.backgroundSize = "400px 400px";
+  background.style.backgroundColor = "rgba(255, 80, 80, 1)";
 };
 
 arcade.onmouseleave = () => {
   home_bar.style.borderTopRightRadius = "45px";
   home_bar.style.borderBottomRightRadius = "45px";
+};
+
+home_bar.onmouseleave = () => {
+  home_bar.style.borderTopLeftRadius = "45px";
+  home_bar.style.borderBottomLeftRadius = "45px";
+  //Change background back to default
+  background.style.backgroundPosition = "center";
+  background.style.backgroundSize = "cover";
+  background.style.backgroundImage = "url(public/IMG_4463.jpeg)";
 };

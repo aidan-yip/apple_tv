@@ -23,6 +23,7 @@ body {
   background-size: cover;
   background-position: center;
   background-image: url(public/IMG_4463.jpeg);
+  transition: ease-in-out 0.5s;
 }
 
 #home_bar {
@@ -138,7 +139,7 @@ img {
 #arcade {
   background: linear-gradient(
     0deg,
-    rgba(255, 149, 65, 1) 0%,
+    rgb(235, 135, 53) 0%,
     rgba(255, 80, 80, 1) 100%
   );
 }
