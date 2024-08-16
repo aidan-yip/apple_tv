@@ -1,5 +1,11 @@
+//Page body
+const body = document.body;
+
 //Background
 const background = document.getElementById("background");
+
+//Scroll container
+const scroll_container = document.getElementById("scroll_container");
 
 //Homebar
 const home_bar = document.getElementById("home_bar");
@@ -28,6 +34,7 @@ const pq = document.getElementById("pq");
 //inputs
 
 const color_input = document.getElementById("color_input");
+const brightness_range = document.getElementById("brightness_range");
 
 window.onscroll = function () {
   scrollFunction();
@@ -41,16 +48,23 @@ function scrollFunction() {
   }
 }
 
+//Brightness
+brightness_range.addEventListener("change", function (e) {
+  background.style.filter = "brightness(" + e.target.value + "%)";
+  home_bar.style.filter = "brightness(" + e.target.value + "%)";
+  scroll_container.style.filter = "brightness(" + e.target.value + "%)";
+});
+
 //Theme
 color_input.addEventListener("change", function (e) {
   // App icons
   for (let i = 0; i < app_icon.length; i++) {
     app_icon[i].style.background = e.target.value;
-    app_icon[i].style.filter = "contrast(80%)";
+    app_icon[i].style.filter = "contrast(95%)";
   }
   for (let i = 0; i < app_icon_scroll.length; i++) {
     app_icon_scroll[i].style.background = e.target.value;
-    app_icon_scroll[i].style.filter = "contrast(80%)";
+    app_icon_scroll[i].style.filter = "contrast(95%)";
   }
 });
 
