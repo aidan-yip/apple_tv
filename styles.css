@@ -4,13 +4,18 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-} 
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-snap-type: y mandatory;
+}
 
 body {
   background-color: rgba(255, 255, 255, 0.94);
-  min-width: 375px;       
-   width: auto !important;
-   width: 375px;        
+  min-width: 375px;
+  width: auto !important;
+  width: 375px;
 }
 
 #color_input {
@@ -142,7 +147,8 @@ input[type="range"]:focus::-ms-fill-upper {
   background-size: cover;
   background-position: center;
   background-image: url(public/IMG_4463.jpeg);
-  transition: ease-in-out 0.5s;
+  transition: background-color ease-in-out 0.5s;
+  scroll-snap-align: start;
 }
 
 #home_bar {
@@ -169,6 +175,7 @@ input[type="range"]:focus::-ms-fill-upper {
 
 .app_icon {
   display: flex;
+  z-index: 1;
   justify-content: center;
   align-items: center;
   width: 16%;
@@ -177,7 +184,6 @@ input[type="range"]:focus::-ms-fill-upper {
   box-shadow: 0px 0px 15px #1f1f1f20;
   border-radius: 20px;
   transition: ease-in-out;
-
   transform-style: preserve-3d;
   transform: perspective(1000px);
 }
@@ -186,11 +192,10 @@ img {
   width: 60%;
   overflow: hidden;
   pointer-events: none;
-  transform: translateZ(20px)
+  transform: translateZ(20px);
 }
 
 #scroll_container > div {
-  
 }
 
 #scroll_container {
@@ -201,7 +206,7 @@ img {
   margin-top: 80vh;
   max-width: 1470px;
   width: 100%;
-  height: 110%;
+  height: 150%;
   position: absolute;
   display: grid;
   justify-content: center;
@@ -213,6 +218,7 @@ img {
   overflow-x: hidden;
   white-space: none;
   background: transparent;
+  scroll-snap-align: start;
 }
 
 .app_icon_scroll {
@@ -415,7 +421,7 @@ img {
 
   #scroll_container {
     margin-top: 88vh;
-    row-gap:  3%;
+    row-gap: 3%;
     grid-template-rows: 7% 7% 7% 7% 7%;
   }
 
@@ -430,5 +436,4 @@ img {
     width: 80%; /* Specific width is required for Firefox. */
     background: transparent; /* Otherwise white in Chrome */
   }
-
 }

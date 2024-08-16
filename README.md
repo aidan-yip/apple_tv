@@ -6,6 +6,7 @@
  <li>Minimalist Flat UI Design</li>
  <li>Fully interactive Animations</li>
  <li>Pure Vanilla JavaScript</li>
+ <li>Responsive Design</li>
 </ul>
  
 ### Icons by <a target="_blank" href="https://icons8.com">Icons8</a>
