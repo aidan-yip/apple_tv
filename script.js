@@ -4,6 +4,11 @@ const background = document.getElementById("background");
 //Homebar
 const home_bar = document.getElementById("home_bar");
 
+//App icons global
+
+const app_icon = document.getElementsByClassName("app_icon");
+const app_icon_scroll = document.getElementsByClassName("app_icon_scroll");
+
 //App icons
 
 const appstore = document.getElementById("appstore");
@@ -20,6 +25,10 @@ const google = document.getElementById("google");
 
 const pq = document.getElementById("pq");
 
+//inputs
+
+const color_input = document.getElementById("color_input");
+
 window.onscroll = function () {
   scrollFunction();
 };
@@ -31,6 +40,19 @@ function scrollFunction() {
     background.style.backdropFilter = "blur(0px)";
   }
 }
+
+//Theme
+color_input.addEventListener("change", function (e) {
+  // App icons
+  for (let i = 0; i < app_icon.length; i++) {
+    app_icon[i].style.background = e.target.value;
+    app_icon[i].style.filter = "contrast(80%)";
+  }
+  for (let i = 0; i < app_icon_scroll.length; i++) {
+    app_icon_scroll[i].style.background = e.target.value;
+    app_icon_scroll[i].style.filter = "contrast(80%)";
+  }
+});
 
 appstore.onclick = () => {
   location.href = "https://www.apple.com/ca/app-store/";

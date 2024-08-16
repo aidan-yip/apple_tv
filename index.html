@@ -310,13 +310,30 @@
 
         <div
           class="app_icon_scroll"
-          id=""
+          id="color_select"
           data-tilt
           data-tilt-glare
           data-tilt-max-glare="0.6"
           data-tilt-scale="113%"
         >
-          <img src="" id="" />
+          <input
+            type="color"
+            id="color_input"
+            list="presetColors"
+            title="Select Color Theme"
+          />
+          <datalist id="presetColors">
+            <!-- Light colors presets -->
+            <option value="#FF7978"></option>
+            <option value="#73E396"></option>
+            <option value="#ADAFFF"></option>
+            <option value="#FFCA75"></option>
+            <!-- Dark colors presets -->
+            <option value="#EC8CE3"></option>
+            <option value="#AFDD6C"></option>
+            <option value="#73BFFF"></option>
+            <option value="#FF8D2E"></option>
+          </datalist>
         </div>
       </div>
     </div>
