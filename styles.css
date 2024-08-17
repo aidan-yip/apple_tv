@@ -147,12 +147,9 @@ body {
   background-size: cover;
   background-position: center;
   background-image: url(public/IMG_4463.jpeg);
-  transition: 
-  background-color ease-in-out 0.5s,
-  background-position ease-in-out 0.5s, 
-  background-image ease-in-out 0.3s,
-  opacity ease-in-out 0.5s,
-  background-size 0.5s;
+  transition: background-color ease-in-out 0.5s,
+    background-position ease-in-out 0.5s, background-image ease-in-out 0.3s,
+    opacity ease-in-out 0.5s, background-size 0.5s;
   scroll-snap-align: start;
 }
 
@@ -191,6 +188,7 @@ body {
   transition: ease-in-out;
   transform-style: preserve-3d;
   transform: perspective(1000px);
+  overflow: hidden;
 }
 
 img {
@@ -240,6 +238,7 @@ img {
   transition: ease-in-out;
   transform-style: preserve-3d;
   transform: perspective(1000px);
+  overflow: hidden;
 }
 
 #appstore {
@@ -339,6 +338,27 @@ img {
 
 #pq_img {
   width: 50%;
+}
+
+#party {
+  background: #a2ffe6;
+}
+
+#party_img {
+  width: 47%;
+}
+
+#github {
+  background: rgb(36, 36, 36);
+  background: linear-gradient(
+    0deg,
+    rgba(36, 36, 36, 1) 0%,
+    rgba(66, 66, 66, 1) 100%
+  );
+}
+
+#github_img {
+  width: 47%;
 }
 
 /* hover */
