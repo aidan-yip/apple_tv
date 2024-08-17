@@ -58,25 +58,6 @@ brightness_range.addEventListener("change", function (e) {
   scroll_container.style.filter = "brightness(" + e.target.value + "%)";
 });
 
-window.onload = () => {
-  function checkTheme(){
-    setTimeout(checkTheme, 5000);
-  }
-};
-
-function checkTheme() {
-  if (
-    window.matchMedia &&
-    window.matchMedia("(prefers-color-scheme: dark)").matches
-  ) {
-    background.style.backgroundImage = "url(public/DSC00151.JPG)";
-  } else {
-    background.style.backgroundImage = "url(public/IMG_4463.jpeg)";
-  }
-};
-
-
-
 //Theme
 color_input.addEventListener("change", function (e) {
   // App icons
