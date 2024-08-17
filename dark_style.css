@@ -4,6 +4,10 @@
     background-color: rgb(38, 38, 38);
   }
 
+  #background {
+    background-image: url(public/DSC00151.JPG);
+  }
+
   .app_icon,
   .app_icon_scroll {
     background: rgb(36, 36, 36);
