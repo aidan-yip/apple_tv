@@ -78,4 +78,18 @@
   #pq {
     background: #171717;
   }
+
+  #party {
+    background: #005e45;
+  }
+
+  #github {
+    background: rgb(0, 2, 66);
+    background: linear-gradient(
+      0deg,
+      rgba(0, 2, 66, 1) 0%,
+      rgba(39, 54, 232, 1) 81%,
+      rgba(63, 48, 255, 1) 100%
+    );
+  }
 }
