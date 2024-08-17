@@ -58,6 +58,25 @@ brightness_range.addEventListener("change", function (e) {
   scroll_container.style.filter = "brightness(" + e.target.value + "%)";
 });
 
+window.onload = () => {
+  function checkTheme(){
+    setTimeout(checkTheme, 5000);
+  }
+};
+
+function checkTheme() {
+  if (
+    window.matchMedia &&
+    window.matchMedia("(prefers-color-scheme: dark)").matches
+  ) {
+    background.style.backgroundImage = "url(public/DSC00151.JPG)";
+  } else {
+    background.style.backgroundImage = "url(public/IMG_4463.jpeg)";
+  }
+};
+
+
+
 //Theme
 color_input.addEventListener("change", function (e) {
   // App icons
@@ -80,8 +99,8 @@ appstore.onmouseover = () => {
     "url(public/app_icons/icons8-app-store-500.png)";
   //Change background to accommodate icon
   background.style.backgroundPosition = "top";
-  background.style.backgroundPositionY = "0%";
-  background.style.backgroundSize = "600px 600px";
+  background.style.backgroundPositionY = "20%";
+  background.style.backgroundSize = "400px 400px";
   background.style.backgroundColor = "#7bcdff";
 };
 
@@ -96,8 +115,8 @@ facetime.onmouseover = () => {
     "url(public/app_icons/icons8-facetime-500.png)";
   //Change background to accommodate icon
   background.style.backgroundPosition = "top";
-  background.style.backgroundPositionY = "0%";
-  background.style.backgroundSize = "600px 600px";
+  background.style.backgroundPositionY = "20%";
+  background.style.backgroundSize = "400px 400px";
   background.style.backgroundColor = "rgb(143, 238, 194)";
 };
 
@@ -165,7 +184,7 @@ appstore.onclick = () => {
 };
 
 //Enter = onClick event
-appstore.addEventListener("keypress", function(event) {
+appstore.addEventListener("keypress", function (event) {
   if (event.key === "Enter") {
     event.preventDefault();
     appstore.click();
@@ -177,7 +196,7 @@ facetime.onclick = () => {
 };
 
 //Enter = onClick event
-facetime.addEventListener("keypress", function(event) {
+facetime.addEventListener("keypress", function (event) {
   if (event.key === "Enter") {
     event.preventDefault();
     facetime.click();
@@ -189,7 +208,7 @@ photos.onclick = () => {
 };
 
 //Enter = onClick event
-photos.addEventListener("keypress", function(event) {
+photos.addEventListener("keypress", function (event) {
   if (event.key === "Enter") {
     event.preventDefault();
     photos.click();
@@ -201,7 +220,7 @@ settings.onclick = () => {
 };
 
 //Enter = onClick event
-settings.addEventListener("keypress", function(event) {
+settings.addEventListener("keypress", function (event) {
   if (event.key === "Enter") {
     event.preventDefault();
     settings.click();
@@ -213,7 +232,7 @@ arcade.onclick = () => {
 };
 
 //Enter = onClick event
-arcade.addEventListener("keypress", function(event) {
+arcade.addEventListener("keypress", function (event) {
   if (event.key === "Enter") {
     event.preventDefault();
     arcade.click();
@@ -226,7 +245,7 @@ youtube.onclick = () => {
 };
 
 //Enter = onClick event
-youtube.addEventListener("keypress", function(event) {
+youtube.addEventListener("keypress", function (event) {
   if (event.key === "Enter") {
     event.preventDefault();
     youtube.click();
@@ -238,7 +257,7 @@ instagram.onclick = () => {
 };
 
 //Enter = onClick event
-instagram.addEventListener("keypress", function(event) {
+instagram.addEventListener("keypress", function (event) {
   if (event.key === "Enter") {
     event.preventDefault();
     instagram.click();
@@ -250,7 +269,7 @@ facebook.onclick = () => {
 };
 
 //Enter = onClick event
-facebook.addEventListener("keypress", function(event) {
+facebook.addEventListener("keypress", function (event) {
   if (event.key === "Enter") {
     event.preventDefault();
     facebook.click();
@@ -262,7 +281,7 @@ twitter.onclick = () => {
 };
 
 //Enter = onClick event
-twitter.addEventListener("keypress", function(event) {
+twitter.addEventListener("keypress", function (event) {
   if (event.key === "Enter") {
     event.preventDefault();
     twitter.click();
@@ -274,7 +293,7 @@ google.onclick = () => {
 };
 
 //Enter = onClick event
-google.addEventListener("keypress", function(event) {
+google.addEventListener("keypress", function (event) {
   if (event.key === "Enter") {
     event.preventDefault();
     google.click();
@@ -287,7 +306,7 @@ pq.onclick = () => {
 };
 
 //Enter = onClick event
-pq.addEventListener("keypress", function(event) {
+pq.addEventListener("keypress", function (event) {
   if (event.key === "Enter") {
     event.preventDefault();
     pq.click();
@@ -299,7 +318,7 @@ party.onclick = () => {
 };
 
 //Enter = onClick event
-party.addEventListener("keypress", function(event) {
+party.addEventListener("keypress", function (event) {
   if (event.key === "Enter") {
     event.preventDefault();
     party.click();
@@ -311,7 +330,7 @@ github.onclick = () => {
 };
 
 //Enter = onClick event
-github.addEventListener("keypress", function(event) {
+github.addEventListener("keypress", function (event) {
   if (event.key === "Enter") {
     event.preventDefault();
     github.click();

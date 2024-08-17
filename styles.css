@@ -249,12 +249,16 @@ img {
   background-color: rgb(123, 205, 255);
 }
 
+#appstore_img {
+  width: 47%;
+}
+
 #facetime {
   background-color: rgb(143, 238, 194);
 }
 
 #facetime_img {
-  width: 80%;
+  width: 60%;
 }
 
 #settings {
