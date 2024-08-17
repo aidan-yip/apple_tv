@@ -134,7 +134,6 @@ home_bar.onmouseleave = () => {
   //Change background back to default
   background.style.backgroundPosition = "center";
   background.style.backgroundSize = "cover";
-  background.style.backgroundImage = "url(public/IMG_4463.jpeg)";
 };
 
 appstore.onclick = () => {
