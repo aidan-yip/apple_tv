@@ -147,7 +147,12 @@ body {
   background-size: cover;
   background-position: center;
   background-image: url(public/IMG_4463.jpeg);
-  transition: background-color ease-in-out 0.5s;
+  transition: 
+  background-color ease-in-out 0.5s,
+  background-position ease-in-out 0.5s, 
+  background-image ease-in-out 0.3s,
+  opacity ease-in-out 0.5s,
+  background-size 0.5s;
   scroll-snap-align: start;
 }
 

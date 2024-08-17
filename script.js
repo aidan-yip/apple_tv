@@ -38,21 +38,6 @@ const pq = document.getElementById("pq");
 const color_input = document.getElementById("color_input");
 const brightness_range = document.getElementById("brightness_range");
 
-/*
-window.onscroll = function () {
-  scrollFunction();
-};
-
-function scrollFunction() {
-  if (document.body.scrollTop > 10 || document.documentElement.scrollTop > 10) {
-    background.style.backdropFilter = "blur(7px)";
-  } else {
-    background.style.backdropFilter = "blur(0px)";
-  }
-}
-*/
-
-
 //Brightness
 brightness_range.addEventListener("change", function (e) {
   background.style.filter = "brightness(" + e.target.value + "%)";
@@ -73,50 +58,6 @@ color_input.addEventListener("change", function (e) {
   }
 });
 
-appstore.onclick = () => {
-  location.href = "https://www.apple.com/ca/app-store/";
-};
-
-facetime.onclick = () => {
-  location.href = "https://apps.apple.com/ca/app/facetime/id1110145091";
-};
-
-photos.onclick = () => {
-  location.href = "https://www.icloud.com/photos/";
-};
-
-settings.onclick = () => {
-  location.href = "https://www.icloud.com/settings";
-};
-
-arcade.onclick = () => {
-  location.href = "https://www.apple.com/ca/apple-arcade/";
-};
-
-youtube.onclick = () => {
-  location.href = "https://www.youtube.com";
-};
-
-instagram.onclick = () => {
-  location.href = "https://www.instagram.com";
-};
-
-facebook.onclick = () => {
-  location.href = "https://www.facebook.com";
-};
-
-twitter.onclick = () => {
-  location.href = "https://x.com";
-};
-
-google.onclick = () => {
-  location.href = "https://www.google.com";
-};
-
-pq.onclick = () => {
-  location.href = "https://perilous-quest.netlify.app";
-};
-
 //app hover background changes
 appstore.onmouseover = () => {
   home_bar.style.borderTopLeftRadius = "30px";
@@ -126,7 +67,8 @@ appstore.onmouseover = () => {
     "url(public/app_icons/icons8-app-store-500.png)";
   //Change background to accommodate icon
   background.style.backgroundPosition = "top";
-  background.style.backgroundSize = "600px 600px";
+  background.style.backgroundPositionY = "20%";
+  background.style.backgroundSize = "550px 550px";
   background.style.backgroundColor = "#7bcdff";
 };
 
@@ -141,7 +83,8 @@ facetime.onmouseover = () => {
     "url(public/app_icons/icons8-facetime-500.png)";
   //Change background to accommodate icon
   background.style.backgroundPosition = "top";
-  background.style.backgroundSize = "600px 600px";
+  background.style.backgroundPositionY = "20%";
+  background.style.backgroundSize = "550px 550px";
   background.style.backgroundColor = "rgb(143, 238, 194)";
 };
 
@@ -193,3 +136,61 @@ home_bar.onmouseleave = () => {
   background.style.backgroundSize = "cover";
   background.style.backgroundImage = "url(public/IMG_4463.jpeg)";
 };
+
+appstore.onclick = () => {
+  location.href = "https://www.apple.com/ca/app-store/";
+};
+
+facetime.onclick = () => {
+  location.href = "https://apps.apple.com/ca/app/facetime/id1110145091";
+};
+
+photos.onclick = () => {
+  location.href = "https://www.icloud.com/photos/";
+};
+
+settings.onclick = () => {
+  location.href = "https://www.icloud.com/settings";
+};
+
+arcade.onclick = () => {
+  location.href = "https://www.apple.com/ca/apple-arcade/";
+};
+
+youtube.onclick = () => {
+  location.href = "https://www.youtube.com";
+};
+
+instagram.onclick = () => {
+  location.href = "https://www.instagram.com";
+};
+
+facebook.onclick = () => {
+  location.href = "https://www.facebook.com";
+};
+
+twitter.onclick = () => {
+  location.href = "https://x.com";
+};
+
+google.onclick = () => {
+  location.href = "https://www.google.com";
+};
+
+pq.onclick = () => {
+  location.href = "https://perilous-quest.netlify.app";
+};
+
+/*
+window.onscroll = function () {
+  scrollFunction();
+};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 10 || document.documentElement.scrollTop > 10) {
+    background.style.backdropFilter = "blur(7px)";
+  } else {
+    background.style.backdropFilter = "blur(0px)";
+  }
+}
+*/
