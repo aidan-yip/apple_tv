@@ -13,12 +13,10 @@ const scroll_container = document.getElementById("scroll_container");
 const home_bar = document.getElementById("home_bar");
 
 //App icons global
-
 const app_icon = document.getElementsByClassName("app_icon");
 const app_icon_scroll = document.getElementsByClassName("app_icon_scroll");
 
 //App icons
-
 const appstore = document.getElementById("appstore");
 const facetime = document.getElementById("facetime");
 const photos = document.getElementById("photos");
@@ -34,7 +32,6 @@ const google = document.getElementById("google");
 const pq = document.getElementById("pq");
 
 //inputs
-
 const color_input = document.getElementById("color_input");
 const brightness_range = document.getElementById("brightness_range");
 
@@ -134,6 +131,14 @@ home_bar.onmouseleave = () => {
   //Change background back to default
   background.style.backgroundPosition = "center";
   background.style.backgroundSize = "cover";
+  if (
+    window.matchMedia &&
+    window.matchMedia("(prefers-color-scheme: dark)").matches
+  ) {
+    background.style.backgroundImage = "url(public/DSC00151.JPG)";
+  } else {
+    background.style.backgroundImage = "url(public/IMG_4463.jpeg)";
+  }
 };
 
 appstore.onclick = () => {
