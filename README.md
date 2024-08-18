@@ -1,4 +1,4 @@
-# Apple TV
+# Mac TV
  An Apple TV interface clone.
  
 <ul>
