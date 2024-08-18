@@ -32,6 +32,12 @@ const twitter = document.getElementById("twitter");
 const facebook = document.getElementById("facebook");
 const google = document.getElementById("google");
 
+//row 2
+const music = document.getElementById("music");
+const spotify = document.getElementById("spotify");
+const soundcloud = document.getElementById("soundcloud");
+const band = document.getElementById("band");
+
 //row 3
 const pq = document.getElementById("pq");
 const party = document.getElementById("party");
@@ -280,6 +286,54 @@ google.addEventListener("keypress", function (event) {
     google.click();
   }
 });
+
+/* row 2 */
+music.onclick = () => {
+  location.href = "https://music.apple.com/us/artist/newave-oceans/1497172775";
+};
+
+//Enter = onClick event
+music.addEventListener("keypress", function (event) {
+  if (event.key === "Enter") {
+    event.preventDefault();
+    music.click();
+  }
+});
+
+spotify.onclick = () => {
+  location.href = "https://open.spotify.com/artist/5Aq8y8dTIBYzng6ZZucQQ1";
+};
+
+//Enter = onClick event
+spotify.addEventListener("keypress", function (event) {
+  if (event.key === "Enter") {
+    event.preventDefault();
+    spotify.click();
+  }
+});
+
+//Enter = onClick event
+soundcloud.addEventListener("keypress", function (event) {
+  if (event.key === "Enter") {
+    event.preventDefault();
+    soundcloud.click();
+  }
+});
+
+soundcloud.onclick = () => {
+  location.href = "https://soundcloud.com/newaveoceans";
+};
+
+band.addEventListener("keypress", function (event) {
+  if (event.key === "Enter") {
+    event.preventDefault();
+    band.click();
+  }
+});
+
+band.onclick = () => {
+  location.href = "https://newaveoceans.bandcamp.com";
+};
 
 /* row 3 */
 pq.onclick = () => {
