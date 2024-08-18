@@ -365,6 +365,40 @@ img {
   width: 47%;
 }
 
+#music {
+  background: rgb(255, 0, 0);
+  background: linear-gradient(
+    0deg,
+    rgba(255, 0, 0, 1) 0%,
+    rgba(255, 113, 113, 1) 100%
+  );
+}
+
+#spotify {
+  background-color: rgb(226, 255, 241);
+}
+
+#spotify_img {
+  width: 40%;
+}
+
+#soundcloud {
+  background: rgb(255, 70, 0);
+  background: linear-gradient(
+    0deg,
+    rgba(255, 70, 0, 1) 0%,
+    rgba(255, 130, 0, 1) 100%
+  );
+}
+
+#soundcloud_img {
+  width: 40%;
+}
+
+#band {
+  background-color: rgb(243, 248, 251);
+}
+
 /* hover */
 
 .app_icon:hover {

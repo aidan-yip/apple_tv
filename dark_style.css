@@ -92,4 +92,22 @@
       rgba(63, 48, 255, 1) 100%
     );
   }
+
+  #music {
+    background: rgb(255, 0, 0);
+    background: linear-gradient(0deg, rgb(104, 0, 0) 0%, rgb(130, 57, 57) 100%);
+  }
+
+  #spotify {
+    background: #171717;
+  }
+
+  #soundcloud {
+    background: #171717;
+  }
+
+  #band {
+    background: #171717;
+  }
+
 }
