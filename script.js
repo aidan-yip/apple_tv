@@ -77,6 +77,25 @@ color_input.addEventListener("change", function (e) {
   }
 });
 
+// sound on mouse hover
+let hover_fx = new Audio(
+  "./public/audio/bloop-4-186533.mp3"
+);
+
+function play_hover_fx() {
+  hover_fx.currentTime = 0;
+  hover_fx.play();
+  console.log("playing hover fx");
+}
+
+for (let i = 0; i < app_icon.length; i++) {
+  app_icon[i].addEventListener("mouseover", play_hover_fx); 
+}
+
+for (let i = 0; i < app_icon_scroll.length; i++) {
+  app_icon_scroll[i].addEventListener("mouseover", play_hover_fx); 
+}
+
 //app hover background changes
 appstore.onmouseover = () => {
   home_bar.style.borderTopLeftRadius = "30px";
@@ -89,6 +108,7 @@ appstore.onmouseover = () => {
   background.style.backgroundPositionY = "20%";
   background.style.backgroundSize = "400px 400px";
   background.style.backgroundColor = "#7bcdff";
+  
 };
 
 appstore.onmouseleave = () => {
@@ -105,6 +125,7 @@ facetime.onmouseover = () => {
   background.style.backgroundPositionY = "20%";
   background.style.backgroundSize = "400px 400px";
   background.style.backgroundColor = "rgb(143, 238, 194)";
+  play_hover_fx();
 };
 
 photos.onmouseover = () => {
