@@ -266,13 +266,13 @@ img {
 
 #brightness_range {
   display: block;
-  margin-bottom: 15px;
-  margin-top: 7px;
+  margin-bottom: 10px;
+  margin-top: 13px;
 }
 
 #volume {
-  margin-bottom: 15px;
-  margin-top: 7px;
+  margin-bottom: 10px;
+  margin-top: 13px;
 }
 
 #appstore {
@@ -458,10 +458,22 @@ img {
 
 .app_icon:hover {
   cursor: pointer;
+  box-shadow: 0px 25px 35px #1f1f1f76;
 }
 
 .app_icon_scroll:hover {
   cursor: pointer;
+  box-shadow: 0px 25px 35px #1f1f1f76;
+}
+
+.app_icon_no_sound:hover {
+  cursor: pointer;
+  box-shadow: 0px 25px 35px #1f1f1f76;
+}
+
+#app_icon_range:hover {
+  cursor: pointer;
+  box-shadow: 0px 25px 35px #1f1f1f76;
 }
 
 @media only screen and (max-width: 1400px) {
