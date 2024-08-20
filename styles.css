@@ -394,6 +394,27 @@ img {
   background-color: rgb(243, 248, 251);
 }
 
+#podcasts {
+  background: rgb(146, 0, 231);
+  background: linear-gradient(
+    0deg,
+    rgb(146, 0, 231) 0%,
+    rgb(209, 129, 255) 100%
+  );
+}
+
+#podcasts_img {
+  width: 68%;
+}
+
+#apple {
+  background-color: #ffffff;
+}
+
+#apple_img {
+  width: 40%;
+}
+
 /* hover */
 
 .app_icon:hover {
