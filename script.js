@@ -54,8 +54,8 @@ const color_input = document.getElementById("color_input");
 const brightness_range = document.getElementById("brightness_range");
 
 window.onload = () => {
+  updateVolume();
   //Light/Dark theme
-
   function activateDarkMode() {
     apple_img.src = "./public/app_icons/icons8-apple-480-light.png";
   }
@@ -92,16 +92,6 @@ for (let i = 0; i < app_icon_scroll.length; i++) {
   app_icon_scroll[i].tabIndex = 0;
 }
 
-// Play sound on scroll
-let scroll_fx = new Audio("./public/audio/notification-beep-229154.mp3");
-
-function play_scroll_fx() {
-  scroll_fx.volume = 0.5;
-  scroll_fx.currentTime = 0;
-  scroll_fx.play();
-  console.log("playing scroll fx");
-}
-
 window.onscroll = function () {
   scrollFunction();
 };
@@ -110,7 +100,7 @@ function scrollFunction() {
   if (document.body.scrollTop > 10 || document.documentElement.scrollTop > 10) {
     play_scroll_fx();
   } else {
-    play_scroll_fx();
+    null
   }
 }
 
@@ -119,6 +109,20 @@ brightness_range.addEventListener("change", function (e) {
   background.style.filter = "brightness(" + e.target.value + "%)";
   home_bar.style.filter = "brightness(" + e.target.value + "%)";
   scroll_container.style.filter = "brightness(" + e.target.value + "%)";
+  play_scroll_fx();
+});
+
+//Volume
+function updateVolume() {
+  const newVolume = document.getElementById("volume").value;
+  document
+    .querySelectorAll("video, audio, embed, object")
+    .forEach((element) => (element.volume = newVolume));
+  console.log(newVolume);
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  document.getElementById("volume").addEventListener("input", updateVolume);
 });
 
 //Theme
@@ -127,6 +131,7 @@ color_input.addEventListener("change", function (e) {
   for (let i = 0; i < app_icon.length; i++) {
     app_icon[i].style.background = e.target.value;
     app_icon[i].style.filter = "contrast(95%)";
+    play_scroll_fx();
   }
   for (let i = 0; i < app_icon_scroll.length; i++) {
     app_icon_scroll[i].style.background = e.target.value;
@@ -135,10 +140,9 @@ color_input.addEventListener("change", function (e) {
 });
 
 // sound on mouse hover
-let hover_fx = new Audio("public/audio/new-notification-7-210334.mp3");
+let hover_fx = document.getElementById("hover_fx");
 
 function play_hover_fx() {
-  hover_fx.volume = 0.5;
   hover_fx.currentTime = 0;
   hover_fx.play();
   console.log("playing hover fx");
@@ -150,6 +154,15 @@ for (let i = 0; i < app_icon.length; i++) {
 
 for (let i = 0; i < app_icon_scroll.length; i++) {
   app_icon_scroll[i].addEventListener("mouseover", play_hover_fx);
+}
+
+// Play sound on scroll
+let scroll_fx = document.getElementById("scroll_fx");
+
+function play_scroll_fx() {
+  scroll_fx.currentTime = 0;
+  scroll_fx.play();
+  console.log("playing scroll fx");
 }
 
 //app hover background changes

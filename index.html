@@ -295,7 +295,10 @@
           data-tilt-max-glare="0.6"
           data-tilt-scale="113%"
         >
-          <img src="./public/app_icons/icons8-apple-480-dark.png" id="apple_img" />
+          <img
+            src="./public/app_icons/icons8-apple-480-dark.png"
+            id="apple_img"
+          />
         </div>
 
         <div
@@ -310,24 +313,23 @@
         </div>
 
         <div
-          class="app_icon_scroll"
-          id=""
+          class="app_icon_no_sound"
+          id="app_icon_range"
           data-tilt
           data-tilt-glare
           data-tilt-max-glare="0.6"
           data-tilt-scale="113%"
-        >
-          <img src="" id="" />
-        </div>
+        ></div>
 
         <div
-          class="app_icon_scroll"
-          id=""
+          class="app_icon_no_sound"
+          id="app_icon_range"
           data-tilt
           data-tilt-glare
           data-tilt-max-glare="0.6"
           data-tilt-scale="113%"
         >
+          <h4>Display</h4>
           <input
             type="range"
             min="70"
@@ -335,10 +337,19 @@
             value="100"
             id="brightness_range"
           />
+          <h4>Sound</h4>
+          <input
+            type="range"
+            min="0"
+            max="1"
+            step="0.1"
+            value="0.3"
+            id="volume"
+          />
         </div>
 
         <div
-          class="app_icon_scroll"
+          class="app_icon_no_sound"
           id="color_select"
           data-tilt
           data-tilt-glare
@@ -367,6 +378,16 @@
         </div>
       </div>
     </div>
+
+    <audio
+      src="./public/audio/new-notification-7-210334.mp3"
+      id="hover_fx"
+    ></audio>
+
+    <audio
+      src="./public/audio/notification-beep-229154.mp3"
+      id="scroll_fx"
+    ></audio>
 
     <script src="./script.js" defer></script>
     <script src="./other_scripts/vanilla-tilt-min.js" defer></script>
