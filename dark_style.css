@@ -4,12 +4,17 @@
     background-color: rgb(38, 38, 38);
   }
 
+  #app_icon_range > h4 {
+    color: #ffffff;
+  }
+
   #background {
     background-image: url(public/DSC00151.JPG);
   }
 
   .app_icon,
-  .app_icon_scroll {
+  .app_icon_scroll,
+  .app_icon_no_sound {
     background: rgb(36, 36, 36);
     background: linear-gradient(
       0deg,
