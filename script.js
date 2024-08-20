@@ -34,6 +34,7 @@ const google = document.getElementById("google");
 
 //row 2
 const music = document.getElementById("music");
+const podcasts = document.getElementById("podcasts");
 const spotify = document.getElementById("spotify");
 const soundcloud = document.getElementById("soundcloud");
 const band = document.getElementById("band");
@@ -44,9 +45,43 @@ const party = document.getElementById("party");
 
 const github = document.getElementById("github");
 
+//row 4
+const apple = document.getElementById("apple");
+const apple_img = document.getElementById("apple_img");
+
 //inputs
 const color_input = document.getElementById("color_input");
 const brightness_range = document.getElementById("brightness_range");
+
+window.onload = () => {
+  //Light/Dark theme
+
+  function activateDarkMode() {
+    apple_img.src = "./public/app_icons/icons8-apple-480-light.png";
+  }
+
+  function activateLightMode() {
+    apple_img.src = "./public/app_icons/icons8-apple-480-dark.png";
+  }
+
+  // MediaQueryList
+  const darkModePreference = window.matchMedia("(prefers-color-scheme: dark)");
+
+  darkModePreference.addEventListener(
+    "change",
+    (e) => e.matches && activateDarkMode()
+  );
+
+  // MediaQueryList
+  const lightModePreference = window.matchMedia(
+    "(prefers-color-scheme: light)"
+  );
+
+  lightModePreference.addEventListener(
+    "change",
+    (e) => e.matches && activateLightMode()
+  );
+};
 
 //Tab index
 for (let i = 0; i < app_icon.length; i++) {
@@ -55,6 +90,28 @@ for (let i = 0; i < app_icon.length; i++) {
 
 for (let i = 0; i < app_icon_scroll.length; i++) {
   app_icon_scroll[i].tabIndex = 0;
+}
+
+// Play sound on scroll
+let scroll_fx = new Audio("./public/audio/notification-beep-229154.mp3");
+
+function play_scroll_fx() {
+  scroll_fx.volume = 0.5;
+  scroll_fx.currentTime = 0;
+  scroll_fx.play();
+  console.log("playing scroll fx");
+}
+
+window.onscroll = function () {
+  scrollFunction();
+};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 10 || document.documentElement.scrollTop > 10) {
+    play_scroll_fx();
+  } else {
+    play_scroll_fx();
+  }
 }
 
 //Brightness
@@ -78,22 +135,21 @@ color_input.addEventListener("change", function (e) {
 });
 
 // sound on mouse hover
-let hover_fx = new Audio(
-  "./public/audio/bloop-4-186533.mp3"
-);
+let hover_fx = new Audio("public/audio/new-notification-7-210334.mp3");
 
 function play_hover_fx() {
+  hover_fx.volume = 0.5;
   hover_fx.currentTime = 0;
   hover_fx.play();
   console.log("playing hover fx");
 }
 
 for (let i = 0; i < app_icon.length; i++) {
-  app_icon[i].addEventListener("mouseover", play_hover_fx); 
+  app_icon[i].addEventListener("mouseover", play_hover_fx);
 }
 
 for (let i = 0; i < app_icon_scroll.length; i++) {
-  app_icon_scroll[i].addEventListener("mouseover", play_hover_fx); 
+  app_icon_scroll[i].addEventListener("mouseover", play_hover_fx);
 }
 
 //app hover background changes
@@ -108,7 +164,6 @@ appstore.onmouseover = () => {
   background.style.backgroundPositionY = "20%";
   background.style.backgroundSize = "400px 400px";
   background.style.backgroundColor = "#7bcdff";
-  
 };
 
 appstore.onmouseleave = () => {
@@ -179,6 +234,7 @@ home_bar.onmouseleave = () => {
     window.matchMedia("(prefers-color-scheme: dark)").matches
   ) {
     background.style.backgroundImage = "url(public/DSC00151.JPG)";
+    apple_img.src = "./public/app_icons/icons8-apple-480-light.png";
   } else {
     background.style.backgroundImage = "url(public/IMG_4463.jpeg)";
   }
@@ -321,6 +377,18 @@ music.addEventListener("keypress", function (event) {
   }
 });
 
+podcasts.onclick = () => {
+  location.href = "https://www.apple.com/apple-podcasts/";
+};
+
+//Enter = onClick event
+podcasts.addEventListener("keypress", function (event) {
+  if (event.key === "Enter") {
+    event.preventDefault();
+    podcasts.click();
+  }
+});
+
 spotify.onclick = () => {
   location.href = "https://open.spotify.com/artist/5Aq8y8dTIBYzng6ZZucQQ1";
 };
@@ -393,16 +461,15 @@ github.addEventListener("keypress", function (event) {
   }
 });
 
-/*
-window.onscroll = function () {
-  scrollFunction();
+/* row 3 */
+apple.onclick = () => {
+  location.href = "https://www.apple.com/ca/store";
 };
 
-function scrollFunction() {
-  if (document.body.scrollTop > 10 || document.documentElement.scrollTop > 10) {
-    background.style.backdropFilter = "blur(7px)";
-  } else {
-    background.style.backdropFilter = "blur(0px)";
+//Enter = onClick event
+apple.addEventListener("keypress", function (event) {
+  if (event.key === "Enter") {
+    event.preventDefault();
+    apple.click();
   }
-}
-*/
+});

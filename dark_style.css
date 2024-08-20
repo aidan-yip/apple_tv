@@ -20,7 +20,8 @@
   }
 
   #home_bar {
-    background-color: rgba(38, 38, 38, 0.8);
+    background-color: rgba(38, 38, 38, 0.7);
+    border: solid 1px #66666636;
   }
 
   #appstore {
@@ -33,11 +34,7 @@
 
   #settings {
     background: rgb(36, 36, 36);
-    background: linear-gradient(
-      0deg,
-      rgba(36, 36, 36, 1) 0%,
-      rgba(66, 66, 66, 1) 100%
-    );
+    background: linear-gradient(0deg, rgb(23, 23, 23) 0%, rgb(63, 63, 63) 100%);
   }
 
   #settings_img {
@@ -48,11 +45,7 @@
 
   #photos {
     background: rgb(36, 36, 36);
-    background: linear-gradient(
-      0deg,
-      rgba(36, 36, 36, 1) 0%,
-      rgba(66, 66, 66, 1) 100%
-    );
+    background: linear-gradient(0deg, rgb(23, 23, 23) 0%, rgb(63, 63, 63) 100%);
   }
 
   #arcade {
@@ -60,11 +53,23 @@
   }
 
   #facebook {
-    background: #171717;
+    background: rgb(25, 25, 25);
+    background: linear-gradient(
+      0deg,
+      rgb(17, 17, 17) 0%,
+      rgba(29, 29, 29, 1) 67%,
+      rgba(40, 40, 40, 1) 100%
+    );
   }
 
   #twitter {
-    background: #151515;
+    background: rgb(25, 25, 25);
+    background: linear-gradient(
+      0deg,
+      rgb(17, 17, 17) 0%,
+      rgba(29, 29, 29, 1) 67%,
+      rgba(40, 40, 40, 1) 100%
+    );
   }
 
   #youtube {
@@ -72,11 +77,23 @@
   }
 
   #google {
-    background: #171717;
+    background: rgb(25, 25, 25);
+    background: linear-gradient(
+      0deg,
+      rgb(17, 17, 17) 0%,
+      rgba(29, 29, 29, 1) 67%,
+      rgba(40, 40, 40, 1) 100%
+    );
   }
 
   #pq {
-    background: #171717;
+    background: rgb(25, 25, 25);
+    background: linear-gradient(
+      0deg,
+      rgb(17, 17, 17) 0%,
+      rgba(29, 29, 29, 1) 67%,
+      rgba(40, 40, 40, 1) 100%
+    );
   }
 
   #party {
@@ -99,15 +116,51 @@
   }
 
   #spotify {
-    background: #171717;
+    background: rgb(25, 25, 25);
+    background: linear-gradient(
+      0deg,
+      rgb(17, 17, 17) 0%,
+      rgba(29, 29, 29, 1) 67%,
+      rgba(40, 40, 40, 1) 100%
+    );
   }
 
   #soundcloud {
-    background: #171717;
+    background: rgb(25, 25, 25);
+    background: linear-gradient(
+      0deg,
+      rgb(17, 17, 17) 0%,
+      rgba(29, 29, 29, 1) 67%,
+      rgba(40, 40, 40, 1) 100%
+    );
   }
 
   #band {
-    background: #171717;
+    background: rgb(25, 25, 25);
+    background: linear-gradient(
+      0deg,
+      rgb(17, 17, 17) 0%,
+      rgba(29, 29, 29, 1) 67%,
+      rgba(40, 40, 40, 1) 100%
+    );
   }
 
+  #podcasts {
+    background: rgb(146, 0, 231);
+    background: linear-gradient(
+      0deg,
+      rgb(63, 0, 99) 0%,
+      rgb(155, 96, 190) 100%
+    );
+  }
+
+  #apple {
+    background: rgb(25, 25, 25);
+    background: linear-gradient(
+      0deg,
+      rgb(17, 17, 17) 0%,
+      rgba(29, 29, 29, 1) 67%,
+      rgba(40, 40, 40, 1) 100%
+    );
+  }
 }
