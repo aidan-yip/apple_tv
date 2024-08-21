@@ -283,23 +283,33 @@ home_bar.onmouseleave = () => {
 
 //folder
 app_folder.onclick = () => {
-  folder_open.style.opacity = "1";
-  folder_open.style.pointerEvents = "all";
-  scroll_container.style.filter = "brightness(40%)";
-  home_bar.style.filter = "brightness(40%)";
-  if (
-    window.matchMedia &&
-    window.matchMedia("(prefers-color-scheme: dark)").matches
-  ) {
-    body.style.background = "rgb(15, 15, 15)";
+  let isMobile =
+    /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+      navigator.userAgent
+    );
+
+  if (isMobile) {
+    console.log("Mobile device detected");
+  } else {
+    folder_open.style.opacity = "1";
+    folder_open.style.pointerEvents = "all";
+    scroll_container.style.filter = "brightness(40%)";
+    home_bar.style.filter = "brightness(40%)";
+    if (
+      window.matchMedia &&
+      window.matchMedia("(prefers-color-scheme: dark)").matches
+    ) {
+      body.style.background = "rgb(15, 15, 15)";
+    }
+    if (
+      window.matchMedia &&
+      window.matchMedia("(prefers-color-scheme: light)").matches
+    ) {
+      body.style.background = "rgba(93, 93, 93, 0.94)";
+    }
+    console.log("folder opened");
+    console.log("Desktop device detected");
   }
-  if (
-    window.matchMedia &&
-    window.matchMedia("(prefers-color-scheme: light)").matches
-  ) {
-    body.style.background = "rgba(93, 93, 93, 0.94)";
-  }
-  console.log("folder opened");
 };
 
 folder_open.onmouseleave = () => {
