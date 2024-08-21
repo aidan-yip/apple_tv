@@ -127,7 +127,6 @@ body {
   width: 375px;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
     Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-  background-color: rgba(255, 255, 255, 0.94);
 }
 
 #app_icon_range > #h4 {
@@ -169,7 +168,7 @@ body {
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 2%;
-  z-index: 1;
+  z-index: 2;
   max-width: 1397px;
   max-height: 173px;
   width: 95%;
@@ -209,8 +208,8 @@ img {
   top: 0;
   margin-left: auto;
   margin-right: auto;
-  padding: 9%;
-  margin-top: 80vh;
+  padding: 3%;
+  margin-top: 90vh;
   max-width: 1470px;
   width: 100%;
   height: 110%;
@@ -226,6 +225,7 @@ img {
   white-space: none;
   background: transparent;
   scroll-snap-align: start;
+  background-color: rgba(255, 255, 255, 0.94);
 }
 
 .app_icon_scroll {
@@ -273,6 +273,39 @@ img {
 #volume {
   margin-bottom: 10px;
   margin-top: 13px;
+}
+
+#folder_back {
+  display: flex;
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 90vh;
+  z-index: 2;
+}
+
+#app_folder_open {
+  display: grid;
+  padding: 44.09375px;
+  gap: 56px;
+  row-gap: 60px;
+  grid-template-columns: 223px 223px 223px;
+  grid-template-rows: 123px 123px 123px;
+  opacity: 0;
+  position: fixed;
+  z-index: 3;
+  width: 60%;
+  max-width: 882px;
+  height: 67%;
+  max-height: 581px;
+  border-radius: 35px;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  background-color: rgba(224, 224, 224, 0.7);
+  border: solid 1px #cacaca36;
+  box-shadow: 0px 0px 15px #1f1f1f20;
+  transition: ease-in-out 0.5s;
 }
 
 #appstore {
@@ -491,12 +524,12 @@ img {
   }
 
   #scroll_container {
-    margin-top: 83vh;
+    margin-top: 93vh;
     max-width: 1470px;
     gap: 4%;
     row-gap: 5%;
-    grid-template-columns: 20% 20% 20% 20% 20%;
-    grid-template-rows: 18% 18% 18% 18% 18%;
+    grid-template-columns: 17% 17% 17% 17% 17%;
+    grid-template-rows: 10% 10% 10% 10% 10%;
   }
 
   .app_icon_scroll {
@@ -505,40 +538,13 @@ img {
     width: 100%;
     height: 100%;
   }
-}
 
-@media only screen and (max-width: 1200px) {
-  .app_icon {
-    height: 70%;
+  #app_icon_range > h4 {
+    display: none;
   }
 
-  #scroll_container {
-    grid-template-rows: 15% 15% 15% 15% 15%;
-  }
-}
-
-@media only screen and (max-width: 920px) {
-  #home_bar {
-    width: 98%;
-    height: 15%;
-  }
-
-  .app_icon {
-    width: 17%;
-    height: 75%;
-  }
-
-  #scroll_container {
-    margin-top: 86vh;
-    gap: 4%;
-    row-gap: 5%;
-    grid-template-columns: 20% 20% 20% 20% 20%;
-    grid-template-rows: 10% 10% 10% 10% 10%;
-  }
-
-  .app_icon_scroll {
-    width: 100%;
-    height: 100%;
+  #brightness_range {
+    display: none;
   }
 }
 
@@ -550,7 +556,7 @@ img {
   }
 
   #scroll_container {
-    margin-top: 88vh;
+    margin-top: 90vh;
     row-gap: 3%;
     grid-template-rows: 7% 7% 7% 7% 7%;
   }

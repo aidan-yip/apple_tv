@@ -49,11 +49,16 @@ const github = document.getElementById("github");
 const apple = document.getElementById("apple");
 const apple_img = document.getElementById("apple_img");
 
+//folder
+const app_folder = document.getElementById("app_folder");
+const folder_open = document.getElementById("app_folder_open");
+
 //inputs
 const color_input = document.getElementById("color_input");
 const brightness_range = document.getElementById("brightness_range");
 
 window.onload = () => {
+  folder_open.style.pointerEvents = "none";
   updateVolume();
   //Light/Dark theme
   function activateDarkMode() {
@@ -100,7 +105,7 @@ function scrollFunction() {
   if (document.body.scrollTop > 10 || document.documentElement.scrollTop > 10) {
     play_scroll_fx();
   } else {
-    null
+    null;
   }
 }
 
@@ -162,6 +167,7 @@ let scroll_fx = document.getElementById("scroll_fx");
 function play_scroll_fx() {
   scroll_fx.currentTime = 0;
   scroll_fx.play();
+  scroll_fx.loop = false;
   console.log("playing scroll fx");
 }
 
@@ -254,6 +260,46 @@ home_bar.onmouseleave = () => {
 };
 
 //Link onclick events
+
+//folder
+app_folder.onclick = () => {
+  folder_open.style.opacity = "1";
+  folder_open.style.pointerEvents = "all";
+  scroll_container.style.filter = "brightness(40%)";
+  home_bar.style.filter = "brightness(40%)";
+  if (
+    window.matchMedia &&
+    window.matchMedia("(prefers-color-scheme: dark)").matches
+  ) {
+    body.style.background = "rgb(15, 15, 15)";
+  }
+  if (
+    window.matchMedia &&
+    window.matchMedia("(prefers-color-scheme: light)").matches
+  ) {
+    body.style.background = "rgba(93, 93, 93, 0.94)";
+  }
+  console.log("folder opened");
+};
+
+folder_open.onmouseleave = () => {
+  folder_open.style.opacity = "0";
+  folder_open.style.pointerEvents = "none";
+  scroll_container.style.filter = "brightness(100%)";
+  if (
+    window.matchMedia &&
+    window.matchMedia("(prefers-color-scheme: dark)").matches
+  ) {
+    body.style.background = "rgb(38, 38, 38)";
+  }
+  if (
+    window.matchMedia &&
+    window.matchMedia("(prefers-color-scheme: light)").matches
+  ) {
+    body.style.background = "rgba(255, 255, 255, 0.94)";
+  }
+  home_bar.style.filter = "brightness(100%)";
+};
 
 //Homebar
 appstore.onclick = () => {
