@@ -502,7 +502,7 @@ img {
   #home_bar {
     margin-bottom: 2%;
     width: 98%;
-    height: 20%;
+    height: 25%;
     border-radius: 35px;
   }
 
@@ -515,6 +515,7 @@ img {
   #scroll_container {
     margin-top: 93vh;
     max-width: 1470px;
+    height: 150%;
     gap: 4%;
     row-gap: 2%;
     grid-template-columns: 17% 17% 17% 17% 17%;
