@@ -198,11 +198,13 @@ appstore.onmouseover = () => {
   background.style.backgroundPositionY = "20%";
   background.style.backgroundSize = "400px 400px";
   background.style.backgroundColor = "#7bcdff";
+  console.log("Corner raadius expand");
 };
 
 appstore.onmouseleave = () => {
   home_bar.style.borderTopLeftRadius = "45px";
   home_bar.style.borderBottomLeftRadius = "45px";
+  console.log("Corner raadius contract");
 };
 
 facetime.onmouseover = () => {
@@ -250,11 +252,13 @@ arcade.onmouseover = () => {
   background.style.backgroundPositionY = "20%";
   background.style.backgroundSize = "400px 400px";
   background.style.backgroundColor = "rgba(255, 80, 80, 1)";
+  console.log("Corner raadius expand");
 };
 
 arcade.onmouseleave = () => {
   home_bar.style.borderTopRightRadius = "45px";
   home_bar.style.borderBottomRightRadius = "45px";
+  console.log("Corner raadius contract");
 };
 
 home_bar.onmouseleave = () => {
@@ -272,6 +276,7 @@ home_bar.onmouseleave = () => {
   } else {
     background.style.backgroundImage = "url(public/IMG_4463.jpeg)";
   }
+  console.log("Reset Homebar");
 };
 
 //Link onclick events
@@ -314,6 +319,7 @@ folder_open.onmouseleave = () => {
     body.style.background = "rgba(255, 255, 255, 0.94)";
   }
   home_bar.style.filter = "brightness(100%)";
+  console.log("folder closed");
 };
 
 //Homebar
