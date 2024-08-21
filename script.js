@@ -65,6 +65,7 @@ const apple = document.getElementById("apple");
 const apple_img = document.getElementById("apple_img");
 
 //folder
+const folder_back = document.getElementById("folder_back");
 const app_folder = document.getElementById("app_folder");
 const folder_open = document.getElementById("app_folder_open");
 
@@ -148,6 +149,7 @@ function scrollFunction() {
 //Brightness
 brightness_range.addEventListener("change", function (e) {
   background.style.filter = "brightness(" + e.target.value + "%)";
+  folder_back.style.filter = "brightness(" + e.target.value + "%)";
   home_bar.style.filter = "brightness(" + e.target.value + "%)";
   scroll_container.style.filter = "brightness(" + e.target.value + "%)";
   play_scroll_fx();
@@ -314,8 +316,10 @@ app_folder.onclick = () => {
   if (isMobile) {
     console.log("Mobile device detected");
   } else {
+    folder_back.style.pointerEvents = "all"
     folder_open.style.opacity = "1";
     folder_open.style.pointerEvents = "all";
+    folder_open.style.zIndex = "3";
     background.style.filter = "brightness(40%)";
     if (
       window.matchMedia &&
@@ -335,6 +339,7 @@ app_folder.onclick = () => {
 };
 
 folder_open.onmouseleave = () => {
+  folder_back.style.pointerEvents = "none"
   folder_open.style.opacity = "0";
   folder_open.style.pointerEvents = "none";
   background.style.filter = "brightness(100%)";
