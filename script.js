@@ -73,8 +73,38 @@ const color_input = document.getElementById("color_input");
 const brightness_range = document.getElementById("brightness_range");
 
 window.onload = () => {
+  //Keep folder popup from preventing mouse events on scroll container
   folder_open.style.pointerEvents = "none";
-  updateVolume();
+  //Check Darkmode every 5 seconds
+  setInterval(function () {
+    //Background and Apple logo
+    if (
+      window.matchMedia &&
+      window.matchMedia("(prefers-color-scheme: dark)").matches
+    ) {
+      background.style.backgroundImage = "url(public/DSC00151.JPG)";
+      apple_img.src = "./public/app_icons/icons8-apple-480-light.png";
+    } else {
+      background.style.backgroundImage = "url(public/IMG_4463.jpeg)";
+    }
+    //Folder background color sync with system theme
+    //dark
+    if (
+      window.matchMedia &&
+      window.matchMedia("(prefers-color-scheme: dark)").matches
+    ) {
+      body.style.background = "rgb(38, 38, 38)";
+    }
+    //light
+    if (
+      window.matchMedia &&
+      window.matchMedia("(prefers-color-scheme: light)").matches
+    ) {
+      body.style.background = "rgba(255, 255, 255, 0.94)";
+    }
+    //log
+    console.log("Theme check active");
+  }, 50);
   //Light/Dark theme
   function activateDarkMode() {
     apple_img.src = "./public/app_icons/icons8-apple-480-light.png";
@@ -138,6 +168,7 @@ function updateVolume() {
   document
     .querySelectorAll("video, audio, embed, object")
     .forEach((element) => (element.volume = newVolume));
+  play_hover_fx();
   console.log(newVolume);
 }
 
@@ -267,15 +298,6 @@ home_bar.onmouseleave = () => {
   //Change background back to default
   background.style.backgroundPosition = "center";
   background.style.backgroundSize = "cover";
-  if (
-    window.matchMedia &&
-    window.matchMedia("(prefers-color-scheme: dark)").matches
-  ) {
-    background.style.backgroundImage = "url(public/DSC00151.JPG)";
-    apple_img.src = "./public/app_icons/icons8-apple-480-light.png";
-  } else {
-    background.style.backgroundImage = "url(public/IMG_4463.jpeg)";
-  }
   console.log("Reset Homebar");
 };
 
@@ -293,8 +315,7 @@ app_folder.onclick = () => {
   } else {
     folder_open.style.opacity = "1";
     folder_open.style.pointerEvents = "all";
-    scroll_container.style.filter = "brightness(40%)";
-    home_bar.style.filter = "brightness(40%)";
+    background.style.filter = "brightness(40%)";
     if (
       window.matchMedia &&
       window.matchMedia("(prefers-color-scheme: dark)").matches
@@ -315,7 +336,7 @@ app_folder.onclick = () => {
 folder_open.onmouseleave = () => {
   folder_open.style.opacity = "0";
   folder_open.style.pointerEvents = "none";
-  scroll_container.style.filter = "brightness(100%)";
+  background.style.filter = "brightness(100%)"
   if (
     window.matchMedia &&
     window.matchMedia("(prefers-color-scheme: dark)").matches
