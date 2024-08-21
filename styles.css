@@ -14,7 +14,7 @@ html {
 /*      Dot       */
 input[type="range"] {
   -webkit-appearance: none; /* Hides the slider so that custom slider can be made */
-  width: 60%; /* Specific width is required for Firefox. */
+  width: 60%; /* Specific width for Firefox. */
   background: transparent; /* Otherwise white in Chrome */
   transform: translateZ(20px);
 }
@@ -42,7 +42,7 @@ input[type="range"]::-webkit-slider-thumb {
   border-radius: 35px;
   background: #ffffff;
   cursor: pointer;
-  margin-top: -7px; /* You need to specify a margin in Chrome, but in Firefox and IE it is automatic */
+  margin-top: -7px; /* Specify a margin in Chrome, in Firefox and IE it is automatic */
   box-shadow: 0px 0px 3px #0000000e, 0px 0px 1px #0d0d0d;
 }
 
@@ -118,8 +118,7 @@ input[type="range"]::-ms-fill-upper {
 input[type="range"]:focus::-ms-fill-upper {
   background: #1793ff;
 }
-
-/* Custom Volume range end */
+/* Custom range end */
 
 body {
   width: auto !important;
@@ -348,16 +347,12 @@ img {
   width: 47%;
 }
 
-#photos {
+#photos, #youtube, #google, #apple {
   background-color: rgb(255, 255, 255);
 }
 
 #photos_img {
   width: 47%;
-}
-
-#youtube {
-  background-color: rgb(255, 255, 255);
 }
 
 #youtube_img {
@@ -393,10 +388,6 @@ img {
 
 #twitter_img {
   width: 40%;
-}
-
-#google {
-  background-color: #ffffff;
 }
 
 #google_img {
@@ -479,16 +470,11 @@ img {
   width: 68%;
 }
 
-#apple {
-  background-color: #ffffff;
-}
-
 #apple_img {
   width: 40%;
 }
 
 /* hover */
-
 .app_icon:hover {
   cursor: pointer;
   box-shadow: 0px 25px 35px #1f1f1f76;
@@ -576,8 +562,8 @@ img {
   }
 
   input[type="range"] {
-    -webkit-appearance: none; /* Hides the slider so that custom slider can be made */
-    width: 80%; /* Specific width is required for Firefox. */
-    background: transparent; /* Otherwise white in Chrome */
+    -webkit-appearance: none;
+    width: 80%;
+    background: transparent;
   }
 }

@@ -198,13 +198,13 @@ appstore.onmouseover = () => {
   background.style.backgroundPositionY = "20%";
   background.style.backgroundSize = "400px 400px";
   background.style.backgroundColor = "#7bcdff";
-  console.log("Corner raadius expand");
+  console.log("Corner radius expand");
 };
 
 appstore.onmouseleave = () => {
   home_bar.style.borderTopLeftRadius = "45px";
   home_bar.style.borderBottomLeftRadius = "45px";
-  console.log("Corner raadius contract");
+  console.log("Corner radius contract");
 };
 
 facetime.onmouseover = () => {
@@ -252,13 +252,13 @@ arcade.onmouseover = () => {
   background.style.backgroundPositionY = "20%";
   background.style.backgroundSize = "400px 400px";
   background.style.backgroundColor = "rgba(255, 80, 80, 1)";
-  console.log("Corner raadius expand");
+  console.log("Corner radius expand");
 };
 
 arcade.onmouseleave = () => {
   home_bar.style.borderTopRightRadius = "45px";
   home_bar.style.borderBottomRightRadius = "45px";
-  console.log("Corner raadius contract");
+  console.log("Corner radius contract");
 };
 
 home_bar.onmouseleave = () => {
