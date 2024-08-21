@@ -530,8 +530,6 @@ img {
     grid-template-rows: auto auto auto;
   }
 
-  #app_folde
-
   .app_icon_scroll {
     max-width: 100%;
     max-height: 100%;
@@ -539,11 +537,16 @@ img {
     height: 100%;
   }
 
+  .app_icon_no_sound {
+    height: auto;
+    max-height: none;
+  }
+
   #app_icon_range > h4 {
     display: none;
   }
 
-  #brightness_range {
+  #volume {
     display: none;
   }
 }
@@ -571,7 +574,7 @@ img {
     display: none;
   }
 
-  #brightness_range {
+  #volume {
     display: none;
   }
 
