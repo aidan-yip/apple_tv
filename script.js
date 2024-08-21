@@ -1,5 +1,20 @@
 "use strict";
 
+// Mobile Alert
+
+function check_mobile() {
+  if (
+    /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+      navigator.userAgent
+    )
+  ) {
+    alert("This page works best on a desktop/laptop.");
+    console.log("mobile browser");
+  } else {
+    console.log("desktop browser");
+  }
+}
+
 //Page body
 const body = document.body;
 
