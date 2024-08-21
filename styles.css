@@ -347,7 +347,10 @@ img {
   width: 47%;
 }
 
-#photos, #youtube, #google, #apple {
+#photos,
+#youtube,
+#google,
+#apple {
   background-color: rgb(255, 255, 255);
 }
 
@@ -513,10 +516,20 @@ img {
     margin-top: 93vh;
     max-width: 1470px;
     gap: 4%;
-    row-gap: 5%;
+    row-gap: 2%;
     grid-template-columns: 17% 17% 17% 17% 17%;
-    grid-template-rows: 10% 10% 10% 10% 10%;
+    grid-template-rows: auto auto auto auto auto;
   }
+
+  #app_folder_open {
+    padding: 3%;
+    gap: 4%;
+    row-gap: 5%;
+    grid-template-columns: 30.5% 30.5% 30.5%;
+    grid-template-rows: auto auto auto;
+  }
+
+  #app_folde
 
   .app_icon_scroll {
     max-width: 100%;
