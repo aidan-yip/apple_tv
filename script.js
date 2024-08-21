@@ -77,16 +77,6 @@ window.onload = () => {
   folder_open.style.pointerEvents = "none";
   //Check Darkmode every 5 seconds
   setInterval(function () {
-    //Background and Apple logo
-    if (
-      window.matchMedia &&
-      window.matchMedia("(prefers-color-scheme: dark)").matches
-    ) {
-      background.style.backgroundImage = "url(public/DSC00151.JPG)";
-      apple_img.src = "./public/app_icons/icons8-apple-480-light.png";
-    } else {
-      background.style.backgroundImage = "url(public/IMG_4463.jpeg)";
-    }
     //Folder background color sync with system theme
     //dark
     if (
@@ -105,6 +95,7 @@ window.onload = () => {
     //log
     console.log("Theme check active");
   }, 50);
+
   //Light/Dark theme
   function activateDarkMode() {
     apple_img.src = "./public/app_icons/icons8-apple-480-light.png";
@@ -298,6 +289,16 @@ home_bar.onmouseleave = () => {
   //Change background back to default
   background.style.backgroundPosition = "center";
   background.style.backgroundSize = "cover";
+  //Background and Apple logo
+  if (
+    window.matchMedia &&
+    window.matchMedia("(prefers-color-scheme: dark)").matches
+  ) {
+    background.style.backgroundImage = "url(public/DSC00151.JPG)";
+    apple_img.src = "./public/app_icons/icons8-apple-480-light.png";
+  } else {
+    background.style.backgroundImage = "url(public/IMG_4463.jpeg)";
+  }
   console.log("Reset Homebar");
 };
 
@@ -336,7 +337,7 @@ app_folder.onclick = () => {
 folder_open.onmouseleave = () => {
   folder_open.style.opacity = "0";
   folder_open.style.pointerEvents = "none";
-  background.style.filter = "brightness(100%)"
+  background.style.filter = "brightness(100%)";
   if (
     window.matchMedia &&
     window.matchMedia("(prefers-color-scheme: dark)").matches
