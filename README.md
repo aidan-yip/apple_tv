@@ -2,12 +2,14 @@
  An Apple TV interface clone.
  
 <ul>
- <li>Supports Dark Mode.</li>
+ <li>Pure Vanilla JavaScript</li>
+ <li>Mobile Device User Agent Detection</li>
+ <li>Sound Design</li>
+ <li>Dark Mode Support</li>
  <li>Minimalist Flat UI Design</li>
  <li>Responsive Design</li>
- <li>Fully interactive Animations</li>
- <li>Pure Vanilla JavaScript</li>
- <li>Sound Design</li>
+ <li>Color Theme Selector</li>
+ <li>Fully interactive 3D Animations</li>
 </ul>
 
 ### Icons by <a target="_blank" href="https://icons8.com">Icons8</a>
