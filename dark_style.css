@@ -12,6 +12,10 @@
     background-image: url(public/DSC00151.JPG);
   }
 
+  #scroll_container {
+    background-color: rgb(38, 38, 38);
+  }
+
   .app_icon,
   .app_icon_scroll,
   .app_icon_no_sound {
@@ -22,6 +26,10 @@
       rgba(66, 66, 66, 1) 100%
     );
     box-shadow: 0px 0px 25px #e8e8e810;
+  }
+
+  #app_folder_open {
+    background-color: rgba(38, 38, 38, 0.7);
   }
 
   #home_bar {
