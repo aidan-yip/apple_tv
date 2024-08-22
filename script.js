@@ -15,6 +15,18 @@ function check_mobile() {
   }
 }
 
+let isMobile =
+/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+  navigator.userAgent
+);
+
+if (isMobile) {
+if (window.innerHeight > window.innerWidth) {
+  alert("Please rotate to Landscape!");
+}
+console.log("Mobile device detected");
+}
+
 //Page body
 const body = document.body;
 
@@ -308,17 +320,6 @@ home_bar.onmouseleave = () => {
 
 //folder
 app_folder.onclick = () => {
-  let isMobile =
-    /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
-      navigator.userAgent
-    );
-
-  if (isMobile) {
-    if (window.innerHeight > window.innerWidth) {
-      alert("Please use Landscape!");
-    }
-    console.log("Mobile device detected");
-  }
   folder_back.style.pointerEvents = "all";
   folder_open.style.opacity = "1";
   folder_open.style.pointerEvents = "all";
