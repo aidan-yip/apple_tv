@@ -16,15 +16,15 @@ function check_mobile() {
 }
 
 let isMobile =
-/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
-  navigator.userAgent
-);
+  /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+    navigator.userAgent
+  );
 
 if (isMobile) {
-if (window.innerHeight > window.innerWidth) {
-  alert("Please rotate to Landscape!");
-}
-console.log("Mobile device detected");
+  if (window.innerHeight > window.innerWidth) {
+    alert("Please rotate to Landscape!");
+  }
+  console.log("Mobile device detected");
 }
 
 //Page body
@@ -80,6 +80,10 @@ const apple_img = document.getElementById("apple_img");
 const folder_back = document.getElementById("folder_back");
 const app_folder = document.getElementById("app_folder");
 const folder_open = document.getElementById("app_folder_open");
+
+//Folder inner
+const mac = document.getElementById("mac");
+const ios = document.getElementById("ios");
 
 //inputs
 const color_input = document.getElementById("color_input");
@@ -603,7 +607,7 @@ github.addEventListener("keypress", function (event) {
   }
 });
 
-/* row 3 */
+/* row 4 */
 apple.onclick = () => {
   location.href = "https://www.apple.com/ca/store";
 };
@@ -613,5 +617,30 @@ apple.addEventListener("keypress", function (event) {
   if (event.key === "Enter") {
     event.preventDefault();
     apple.click();
+  }
+});
+
+/* folder inner */
+mac.onclick = () => {
+  location.href = "https://www.apple.com/ca/macos/sonoma/";
+};
+
+//Enter = onClick event
+mac.addEventListener("keypress", function (event) {
+  if (event.key === "Enter") {
+    event.preventDefault();
+    mac.click();
+  }
+});
+
+ios.onclick = () => {
+  location.href = "https://www.apple.com/ca/ios/ios-17/";
+};
+
+//Enter = onClick event
+ios.addEventListener("keypress", function (event) {
+  if (event.key === "Enter") {
+    event.preventDefault();
+    ios.click();
   }
 });

@@ -476,6 +476,18 @@ img {
   width: 40%;
 }
 
+#file_img {
+  width: 47%;
+}
+
+#mac_img {
+  width: 47%;
+}
+
+#ios_img {
+  width: 47%;
+}
+
 /* hover */
 .app_icon:hover {
   cursor: pointer;
