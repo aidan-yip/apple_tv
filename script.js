@@ -314,32 +314,56 @@ app_folder.onclick = () => {
     );
 
   if (isMobile) {
+    if (window.innerHeight > window.innerWidth) {
+      alert("Please use Landscape!");
+    }
     console.log("Mobile device detected");
-  } else {
-    folder_back.style.pointerEvents = "all"
-    folder_open.style.opacity = "1";
-    folder_open.style.pointerEvents = "all";
-    folder_open.style.zIndex = "3";
-    background.style.filter = "brightness(40%)";
-    if (
-      window.matchMedia &&
-      window.matchMedia("(prefers-color-scheme: dark)").matches
-    ) {
-      body.style.background = "rgb(15, 15, 15)";
-    }
-    if (
-      window.matchMedia &&
-      window.matchMedia("(prefers-color-scheme: light)").matches
-    ) {
-      body.style.background = "rgba(93, 93, 93, 0.94)";
-    }
-    console.log("folder opened");
-    console.log("Desktop device detected");
   }
+  folder_back.style.pointerEvents = "all";
+  folder_open.style.opacity = "1";
+  folder_open.style.pointerEvents = "all";
+  folder_open.style.zIndex = "3";
+  background.style.filter = "brightness(40%)";
+  if (
+    window.matchMedia &&
+    window.matchMedia("(prefers-color-scheme: dark)").matches
+  ) {
+    body.style.background = "rgb(15, 15, 15)";
+  }
+  if (
+    window.matchMedia &&
+    window.matchMedia("(prefers-color-scheme: light)").matches
+  ) {
+    body.style.background = "rgba(93, 93, 93, 0.94)";
+  }
+  console.log("folder opened");
+  console.log("Desktop device detected");
 };
 
 folder_open.onmouseleave = () => {
-  folder_back.style.pointerEvents = "none"
+  folder_back.style.pointerEvents = "none";
+  folder_open.style.opacity = "0";
+  folder_open.style.pointerEvents = "none";
+  background.style.filter = "brightness(100%)";
+  if (
+    window.matchMedia &&
+    window.matchMedia("(prefers-color-scheme: dark)").matches
+  ) {
+    body.style.background = "rgb(38, 38, 38)";
+  }
+  if (
+    window.matchMedia &&
+    window.matchMedia("(prefers-color-scheme: light)").matches
+  ) {
+    body.style.background = "rgba(255, 255, 255, 0.94)";
+  }
+  home_bar.style.filter = "brightness(100%)";
+  console.log("folder closed");
+};
+
+//Touchscreen support
+scroll_container.ontouchstart = () => {
+  folder_back.style.pointerEvents = "none";
   folder_open.style.opacity = "0";
   folder_open.style.pointerEvents = "none";
   background.style.filter = "brightness(100%)";
