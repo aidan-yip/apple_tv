@@ -512,8 +512,31 @@ google.addEventListener("keypress", function (event) {
 
 /* row 2 */
 music.onclick = () => {
-  location.href = "https://music.apple.com/us/artist/newave-oceans/1497172775";
+  
 };
+
+let party_music = new Audio ("./public/audio/party_music.wav");
+
+function play_party() {
+  party_music.currentTime = 0;
+  party_music.play();
+  party_music.loop = false;
+  console.log("playing scroll fx");
+}
+
+music.addEventListener("click", () => {
+  Notification.requestPermission().then((perm) => {
+    if (perm === "granted") {
+      new Notification("Now Playing", {
+        body: "Party Time - Newave Oceans",
+        icon: "./public/icons/music.png",
+        tag: "desktop",
+        vibrate: [200, 100, 200],
+      });
+    }
+  });
+  play_party();
+});
 
 //Enter = onClick event
 music.addEventListener("keypress", function (event) {
