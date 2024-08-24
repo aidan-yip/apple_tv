@@ -511,11 +511,11 @@ google.addEventListener("keypress", function (event) {
 });
 
 /* row 2 */
-music.onclick = () => {
-  
+music.ontouchstart = () => {
+  play_party();
 };
 
-let party_music = new Audio ("./public/audio/party_music.wav");
+let party_music = new Audio("./public/audio/party_music.wav");
 
 function play_party() {
   party_music.currentTime = 0;
