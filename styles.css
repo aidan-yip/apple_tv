@@ -128,6 +128,11 @@ body {
     Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
 
+.color_blend {
+  filter: brightness(220%) contrast(50%) grayscale(100%);
+  mix-blend-mode: hard-light;
+}
+
 #app_icon_range > #h4 {
   display: block;
   margin-bottom: 10px;
@@ -137,7 +142,7 @@ body {
 #color_input {
   width: 50%;
   height: 70%;
-  border: solid 5px #212121;
+  border: solid 3px #212121;
   border-radius: 10px;
   transform: translateZ(20px);
 }
@@ -585,7 +590,7 @@ img {
     min-height: 64px;
     border-radius: 15px;
   }
-  
+
   .app_icon_no_sound {
     min-height: none;
   }
