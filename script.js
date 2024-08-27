@@ -43,6 +43,9 @@ const home_bar = document.getElementById("home_bar");
 const app_icon = document.getElementsByClassName("app_icon");
 const app_icon_scroll = document.getElementsByClassName("app_icon_scroll");
 
+//images global
+const images = document.querySelectorAll("img");
+
 //App icons
 
 //Homebar
@@ -196,6 +199,9 @@ color_input.addEventListener("change", function (e) {
   for (let i = 0; i < app_icon_scroll.length; i++) {
     app_icon_scroll[i].style.background = e.target.value;
     app_icon_scroll[i].style.filter = "contrast(95%)";
+  }
+  for (let i = 0; i < images.length; i++) {
+    images[i].classList.add("color_blend");
   }
 });
 
