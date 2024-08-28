@@ -42,6 +42,7 @@ const home_bar = document.getElementById("home_bar");
 //App icons global
 const app_icon = document.getElementsByClassName("app_icon");
 const app_icon_scroll = document.getElementsByClassName("app_icon_scroll");
+const app_icon_no_sound = document.getElementsByClassName("app_icon_no_sound");
 
 //images global
 const images = document.querySelectorAll("img");
@@ -199,6 +200,9 @@ color_input.addEventListener("change", function (e) {
   for (let i = 0; i < app_icon_scroll.length; i++) {
     app_icon_scroll[i].style.background = e.target.value;
     app_icon_scroll[i].style.filter = "contrast(95%)";
+  }
+  for (let i = 0; i < app_icon_no_sound.length; i++) {
+    app_icon_no_sound[i].style.background = e.target.value;
   }
   for (let i = 0; i < images.length; i++) {
     images[i].classList.add("color_blend");
