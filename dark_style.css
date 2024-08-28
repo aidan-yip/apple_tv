@@ -8,6 +8,10 @@
     color: #ffffff;
   }
 
+  #theme_text > span {
+    color: #ffffff;
+  }
+
   #background {
     background-image: url(public/DSC00151.JPG);
   }
