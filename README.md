@@ -4,7 +4,7 @@
 <ul>
  <li>Pure Vanilla JavaScript</li>
  <li>Mobile Device User Agent Detection</li>
- <li>Notification API Called onplay Event</li>
+ <li>Notification API Called during Event</li>
  <li>Sound Design</li>
  <li>Dark Mode Support</li>
  <li>Minimalist Flat UI Design</li>
