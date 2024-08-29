@@ -85,6 +85,10 @@ const folder_back = document.getElementById("folder_back");
 const app_folder = document.getElementById("app_folder");
 const folder_open = document.getElementById("app_folder_open");
 
+const newave = document.getElementById("newave");
+const skrem = document.getElementById("skrem");
+const audio_tri = document.getElementById("audio_tri");
+
 //Folder inner
 const mac = document.getElementById("mac");
 const ios = document.getElementById("ios");
@@ -675,5 +679,41 @@ ios.addEventListener("keypress", function (event) {
   if (event.key === "Enter") {
     event.preventDefault();
     ios.click();
+  }
+});
+
+newave.onclick = () => {
+  location.href = "https://www.instagram.com/newave_oceans_official/";
+};
+
+//Enter = onClick event
+newave.addEventListener("keypress", function (event) {
+  if (event.key === "Enter") {
+    event.preventDefault();
+    newave.click();
+  }
+});
+
+skrem.onclick = () => {
+  location.href = "https://www.instagram.com/skremzy/";
+};
+
+//Enter = onClick event
+skrem.addEventListener("keypress", function (event) {
+  if (event.key === "Enter") {
+    event.preventDefault();
+    skrem.click();
+  }
+});
+
+audio_tri.onclick = () => {
+  location.href = "https://www.instagram.com/audio_phobia/";
+};
+
+//Enter = onClick event
+audio_tri.addEventListener("keypress", function (event) {
+  if (event.key === "Enter") {
+    event.preventDefault();
+    audio_tri.click();
   }
 });

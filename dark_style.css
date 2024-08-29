@@ -49,7 +49,8 @@
     background: rgb(0, 79, 42);
   }
 
-  #photos, #settings {
+  #photos,
+  #settings {
     background: rgb(36, 36, 36);
     background: linear-gradient(0deg, rgb(23, 23, 23) 0%, rgb(63, 63, 63) 100%);
   }
@@ -64,7 +65,15 @@
     background: linear-gradient(0deg, rgb(133, 60, 0) 0%, rgb(117, 0, 0) 100%);
   }
 
-  #facebook, #twitter, #google, #pq, #spotify, #soundcloud, #band, #apple {
+  #facebook,
+  #twitter,
+  #google,
+  #pq,
+  #spotify,
+  #soundcloud,
+  #band,
+  #apple,
+  #audio_tri {
     background: rgb(25, 25, 25);
     background: linear-gradient(
       0deg,
@@ -106,4 +115,21 @@
     );
   }
 
+  #newave {
+    background: rgb(129, 135, 149);
+    background: linear-gradient(
+      318deg,
+      rgba(129, 135, 149, 1) 0%,
+      rgba(0, 44, 65, 1) 100%
+    );
+  }
+
+  #skrem {
+    background: rgb(114, 136, 114);
+    background: radial-gradient(
+      circle,
+      rgba(114, 136, 114, 1) 0%,
+      rgba(41, 61, 41, 1) 100%
+    );
+  }
 }
