@@ -498,6 +498,35 @@ img {
   width: 47%;
 }
 
+#newave {
+  background: rgb(185, 236, 247);
+  background: linear-gradient(
+    318deg,
+    rgba(185, 236, 247, 1) 0%,
+    rgba(12, 125, 212, 1) 100%
+  );
+}
+
+#newave_img {
+  width: 50%;
+}
+
+#skrem {
+  background: #5bdfa8;
+}
+
+#skrem_img {
+  width: 39%;
+}
+
+#audio_tri {
+  background: #000000;
+}
+
+#audio_tri_img {
+  width: 47%;
+}
+
 /* hover */
 .app_icon:hover {
   cursor: pointer;
