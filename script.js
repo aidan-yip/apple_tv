@@ -47,6 +47,10 @@ const app_icon_no_sound = document.getElementsByClassName("app_icon_no_sound");
 //images global
 const images = document.querySelectorAll("img");
 
+//images
+const apple_img = document.getElementById("apple_img");
+const wiki_img = document.getElementById("wiki_img");
+
 //App icons
 
 //Homebar
@@ -78,20 +82,24 @@ const github = document.getElementById("github");
 
 //row 4
 const apple = document.getElementById("apple");
-const apple_img = document.getElementById("apple_img");
+const apple_tv = document.getElementById("apple_tv");
 
 //folder
 const folder_back = document.getElementById("folder_back");
 const app_folder = document.getElementById("app_folder");
 const folder_open = document.getElementById("app_folder_open");
 
+//Folder inner
+
+//row 1
+const mac = document.getElementById("mac");
+const ios = document.getElementById("ios");
+const findmy = document.getElementById("findmy");
+//row 2
+//row 3
 const newave = document.getElementById("newave");
 const skrem = document.getElementById("skrem");
 const audio_tri = document.getElementById("audio_tri");
-
-//Folder inner
-const mac = document.getElementById("mac");
-const ios = document.getElementById("ios");
 
 //inputs
 const color_input = document.getElementById("color_input");
@@ -109,6 +117,7 @@ window.onload = () => {
       window.matchMedia("(prefers-color-scheme: dark)").matches
     ) {
       body.style.background = "rgb(38, 38, 38)";
+      activateDarkMode();
     }
     //light
     if (
@@ -124,10 +133,12 @@ window.onload = () => {
   //Light/Dark theme
   function activateDarkMode() {
     apple_img.src = "./public/app_icons/icons8-apple-480-light.png";
+    wiki_img.src = "public/app_icons/icons8-wikipedia-512_light.png";
   }
 
   function activateLightMode() {
     apple_img.src = "./public/app_icons/icons8-apple-480-dark.png";
+    wiki_img.src = "public/app_icons/icons8-wikipedia-512_dark.png";
   }
 
   // MediaQueryList
@@ -211,6 +222,8 @@ color_input.addEventListener("change", function (e) {
   for (let i = 0; i < images.length; i++) {
     images[i].classList.add("color_blend");
   }
+  apple_img.src = "./public/app_icons/icons8-apple-480-light.png";
+  wiki_img.src = "public/app_icons/icons8-wikipedia-512_light.png";
 });
 
 // sound on mouse hover
@@ -657,6 +670,30 @@ apple.addEventListener("keypress", function (event) {
   }
 });
 
+apple_tv.onclick = () => {
+  location.href = "https://www.apple.com/ca/tv-home/";
+};
+
+//Enter = onClick event
+apple_tv.addEventListener("keypress", function (event) {
+  if (event.key === "Enter") {
+    event.preventDefault();
+    apple_tv.click();
+  }
+});
+
+wiki.onclick = () => {
+  location.href = "https://www.wikipedia.org";
+};
+
+//Enter = onClick event
+wiki.addEventListener("keypress", function (event) {
+  if (event.key === "Enter") {
+    event.preventDefault();
+    wiki.click();
+  }
+});
+
 /* folder inner */
 mac.onclick = () => {
   location.href = "https://www.apple.com/ca/macos/sonoma/";
@@ -679,6 +716,18 @@ ios.addEventListener("keypress", function (event) {
   if (event.key === "Enter") {
     event.preventDefault();
     ios.click();
+  }
+});
+
+findmy.onclick = () => {
+  location.href = "https://www.icloud.com/find";
+};
+
+//Enter = onClick event
+findmy.addEventListener("keypress", function (event) {
+  if (event.key === "Enter") {
+    event.preventDefault();
+    findmy.click();
   }
 });
 

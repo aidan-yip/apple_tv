@@ -129,7 +129,7 @@ body {
 }
 
 .color_blend {
-  filter: brightness(220%) contrast(50%) grayscale(100%);
+  filter: brightness(200%) contrast(50%) grayscale(100%);
   mix-blend-mode: hard-light;
 }
 
@@ -359,7 +359,8 @@ img {
 #photos,
 #youtube,
 #google,
-#apple {
+#apple,
+#wiki {
   background-color: rgb(255, 255, 255);
 }
 
@@ -524,6 +525,33 @@ img {
 }
 
 #audio_tri_img {
+  width: 47%;
+}
+
+#apple_tv {
+  background: rgb(25, 25, 25);
+  background: linear-gradient(
+    0deg,
+    rgb(17, 17, 17) 0%,
+    rgb(64, 64, 64) 67%,
+    rgb(88, 88, 88) 100%
+  );
+}
+
+#apple_tv_img {
+  width: 100%;
+}
+
+#findmy {
+  background: rgb(192, 192, 192);
+  background: linear-gradient(
+    0deg,
+    rgb(192, 192, 192) 0%,
+    rgb(233, 233, 233) 100%
+  );
+}
+
+#wiki_img {
   width: 47%;
 }
 
