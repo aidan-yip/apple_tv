@@ -43,6 +43,11 @@
 
   #appstore {
     background: rgb(0, 51, 91);
+    background: linear-gradient(
+      0deg,
+      rgba(0, 51, 91, 1) 0%,
+      rgb(27, 117, 196) 100%
+    );
   }
 
   #facetime {
@@ -80,7 +85,10 @@
   #band,
   #apple,
   #audio_tri,
-  #wiki {
+  #wiki,
+  #youtube,
+  #airpods,
+  #instagram {
     background: rgb(25, 25, 25);
     background: linear-gradient(
       0deg,
@@ -88,10 +96,6 @@
       rgba(29, 29, 29, 1) 67%,
       rgba(40, 40, 40, 1) 100%
     );
-  }
-
-  #youtube {
-    background: rgb(87, 0, 0);
   }
 
   #party {

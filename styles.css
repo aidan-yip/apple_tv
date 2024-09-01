@@ -305,7 +305,7 @@ img {
   z-index: 3;
   width: 60%;
   max-width: 882px;
-  height: 67%;
+  height: auto;
   max-height: 581px;
   border-radius: 35px;
   backdrop-filter: blur(10px);
@@ -321,7 +321,13 @@ img {
   background-attachment: fixed;
   background-size: cover;
   background-position: center;
-  background-color: rgb(123, 205, 255);
+  background: rgb(34, 153, 251);
+  background: rgb(34, 135, 251);
+  background: linear-gradient(
+    0deg,
+    rgba(34, 135, 251, 1) 0%,
+    rgba(109, 200, 255, 1) 100%
+  );
 }
 
 #appstore_img {
@@ -338,7 +344,7 @@ img {
 }
 
 #facetime_img {
-  width: 59%;
+  width: 55%;
 }
 
 #settings {
@@ -370,7 +376,8 @@ img {
 #youtube,
 #google,
 #apple,
-#wiki {
+#wiki,
+#airpods {
   background: rgb(233, 233, 233);
   background: linear-gradient(
     0deg,
@@ -399,7 +406,7 @@ img {
 }
 
 #instagram_img {
-  width: 50%;
+  width: 35%;
 }
 
 #facebook {
@@ -570,6 +577,10 @@ img {
   width: 47%;
 }
 
+#airpods_img {
+  width: 37%;
+}
+
 /* hover */
 .app_icon:hover {
   cursor: pointer;
@@ -597,7 +608,7 @@ img {
     width: 98%;
     height: 22%;
     max-height: 173px;
-    border-radius: 25px;
+    border-radius: 45px;
   }
 
   .app_icon {
