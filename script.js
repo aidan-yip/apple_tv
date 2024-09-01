@@ -50,6 +50,8 @@ const images = document.querySelectorAll("img");
 //images
 const apple_img = document.getElementById("apple_img");
 const wiki_img = document.getElementById("wiki_img");
+const airpods_img = document.getElementById("airpods_img");
+const instagram_img = document.getElementById("instagram_img");
 
 //App icons
 
@@ -82,6 +84,7 @@ const github = document.getElementById("github");
 
 //row 4
 const apple = document.getElementById("apple");
+const airpods = document.getElementById("airpods");
 const apple_tv = document.getElementById("apple_tv");
 
 //folder
@@ -134,11 +137,15 @@ window.onload = () => {
   function activateDarkMode() {
     apple_img.src = "./public/app_icons/icons8-apple-480-light.png";
     wiki_img.src = "public/app_icons/icons8-wikipedia-512_light.png";
+    airpods_img.src = "./public/app_icons/icons8-airpods-3-100_light.png";
+    instagram_img.src = "./public/app_icons/insta_dark.png";
   }
 
   function activateLightMode() {
     apple_img.src = "./public/app_icons/icons8-apple-480-dark.png";
     wiki_img.src = "public/app_icons/icons8-wikipedia-512_dark.png";
+    airpods_img.src = "./public/app_icons/icons8-airpods-3-100.png";
+    instagram_img.src = "./public/app_icons/icons8-instagram-512.png";
   }
 
   // MediaQueryList
@@ -340,7 +347,6 @@ home_bar.onmouseleave = () => {
     window.matchMedia("(prefers-color-scheme: dark)").matches
   ) {
     background.style.backgroundImage = "url(public/DSC00151.JPG)";
-    apple_img.src = "./public/app_icons/icons8-apple-480-light.png";
   } else {
     background.style.backgroundImage = "url(public/IMG_4463.jpeg)";
   }
@@ -538,7 +544,19 @@ google.addEventListener("keypress", function (event) {
 });
 
 /* row 2 */
-music.ontouchstart = () => {
+music.onclick = () => {
+  location.href = "https://music.apple.com/us/browse";
+};
+
+//Enter = onClick event
+music.addEventListener("keypress", function (event) {
+  if (event.key === "Enter") {
+    event.preventDefault();
+    music.click();
+  }
+});
+
+airpods.ontouchstart = () => {
   play_party();
 };
 
@@ -551,7 +569,7 @@ function play_party() {
   console.log("playing scroll fx");
 }
 
-music.addEventListener("click", () => {
+airpods.addEventListener("click", () => {
   Notification.requestPermission().then((perm) => {
     if (perm === "granted") {
       new Notification("Now Playing", {
@@ -566,15 +584,15 @@ music.addEventListener("click", () => {
 });
 
 //Enter = onClick event
-music.addEventListener("keypress", function (event) {
+airpods.addEventListener("keypress", function (event) {
   if (event.key === "Enter") {
     event.preventDefault();
-    music.click();
+    airpods.click();
   }
 });
 
 podcasts.onclick = () => {
-  location.href = "https://www.apple.com/apple-podcasts/";
+  location.href = "https://podcasts.apple.com/us/browse";
 };
 
 //Enter = onClick event
