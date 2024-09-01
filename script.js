@@ -272,7 +272,7 @@ appstore.onmouseover = () => {
   background.style.backgroundPosition = "top";
   background.style.backgroundPositionY = "20%";
   background.style.backgroundSize = "400px 400px";
-  background.style.backgroundColor = "#7bcdff";
+  background.style.backgroundColor = "rgb(72, 185, 255)";
   console.log("Corner radius expand");
 };
 
