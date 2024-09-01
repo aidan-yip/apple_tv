@@ -277,12 +277,12 @@ appstore.onmouseleave = () => {
 facetime.onmouseover = () => {
   //icon
   background.style.backgroundImage =
-    "url(public/app_icons/icons8-facetime-500.png)";
+    "url(public/app_icons/icons8-facetime-500-fill.png)";
   //Change background to accommodate icon
   background.style.backgroundPosition = "top";
   background.style.backgroundPositionY = "20%";
   background.style.backgroundSize = "400px 400px";
-  background.style.backgroundColor = "rgb(143, 238, 194)";
+  background.style.backgroundColor = "rgb(128, 248, 119)";
   play_hover_fx();
 };
 
