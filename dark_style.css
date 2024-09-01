@@ -47,6 +47,11 @@
 
   #facetime {
     background: rgb(0, 79, 42);
+    background: linear-gradient(
+      0deg,
+      rgba(0, 79, 42, 1) 0%,
+      rgba(80, 153, 75, 1) 100%
+    );
   }
 
   #photos,
