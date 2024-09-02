@@ -141,7 +141,7 @@ body {
 
 #color_input {
   width: 50%;
-  height: 70%;
+  height: 60%;
   border: solid 3px #212121;
   border-radius: 10px;
   transform: translateZ(20px);
@@ -185,7 +185,7 @@ body {
   background-color: rgba(255, 255, 255, 0.7);
   -webkit-backdrop-filter: blur(7px);
   box-shadow: 0px 0px 25px #1f1f1f3a;
-  border-radius: 45px;
+  border-radius: 53px;
   border: solid 1px #cacaca36;
   transition: border-radius ease-in-out 0.2s;
 }
@@ -199,7 +199,7 @@ body {
   height: 71%;
   background-color: rgb(224, 224, 224);
   box-shadow: 0px 0px 15px #1f1f1f20;
-  border-radius: 20px;
+  border-radius: 25px;
   transition: ease-in-out;
   transform-style: preserve-3d;
   transform: perspective(1000px);
@@ -246,7 +246,7 @@ img {
   height: 100%;
   background-color: rgb(224, 224, 224);
   box-shadow: 0px 0px 15px #1f1f1f20;
-  border-radius: 20px;
+  border-radius: 25px;
   transition: ease-in-out;
   transform-style: preserve-3d;
   transform: perspective(1000px);
@@ -262,7 +262,7 @@ img {
   height: 100%;
   background-color: rgb(224, 224, 224);
   box-shadow: 0px 0px 15px #1f1f1f20;
-  border-radius: 20px;
+  border-radius: 25px;
   transition: ease-in-out;
   transform-style: preserve-3d;
   transform: perspective(1000px);
@@ -607,7 +607,7 @@ img {
     width: 98%;
     height: 22%;
     max-height: 173px;
-    border-radius: 45px;
+    border-radius: 53px;
   }
 
   .app_icon {
@@ -662,7 +662,7 @@ img {
 @media only screen and (max-width: 600px) {
   #home_bar {
     width: 98%;
-    height: 11%;
+    height: 12%;
     border-radius: 20px;
   }
 
@@ -686,7 +686,7 @@ img {
     height: 100%;
     min-height: 57.3px;
     max-height: 57.3px;
-    border-radius: 15px;
+    border-radius: 20px;
   }
 
   .app_icon_no_sound {
