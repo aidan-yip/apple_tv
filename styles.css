@@ -160,7 +160,7 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
-  background-position: center;
+  background-position: bottom;
   background-image: url(public/IMG_4463.jpeg);
   transition: background-color ease-in-out 0.5s,
     background-position ease-in-out 0.5s, background-image ease-in-out 0.3s,

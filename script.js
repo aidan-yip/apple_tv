@@ -341,7 +341,7 @@ home_bar.onmouseleave = () => {
   home_bar.style.borderTopLeftRadius = "53px";
   home_bar.style.borderBottomLeftRadius = "53px";
   //Change background back to default
-  background.style.backgroundPosition = "center";
+  background.style.backgroundPosition = "bottom";
   background.style.backgroundSize = "cover";
   //Background and Apple logo
   if (
