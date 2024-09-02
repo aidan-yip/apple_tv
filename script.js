@@ -232,6 +232,7 @@ color_input.addEventListener("change", function (e) {
   apple_img.src = "./public/app_icons/icons8-apple-480-light.png";
   wiki_img.src = "public/app_icons/icons8-wikipedia-512_light.png";
   instagram_img.src = "./public/app_icons/icons8-instagram-512.png";
+  airpods_img.src = "./public/app_icons/icons8-airpods-3-100_light.png";
 });
 
 // sound on mouse hover
