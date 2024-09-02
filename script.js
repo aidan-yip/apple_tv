@@ -264,8 +264,8 @@ function play_scroll_fx() {
 
 //app hover background changes
 appstore.onmouseover = () => {
-  home_bar.style.borderTopLeftRadius = "30px";
-  home_bar.style.borderBottomLeftRadius = "30px";
+  home_bar.style.borderTopLeftRadius = "35px";
+  home_bar.style.borderBottomLeftRadius = "35px";
   //icon
   background.style.backgroundImage =
     "url(public/app_icons/icons8-app-store-500.png)";
@@ -278,8 +278,8 @@ appstore.onmouseover = () => {
 };
 
 appstore.onmouseleave = () => {
-  home_bar.style.borderTopLeftRadius = "45px";
-  home_bar.style.borderBottomLeftRadius = "45px";
+  home_bar.style.borderTopLeftRadius = "53px";
+  home_bar.style.borderBottomLeftRadius = "53px";
   console.log("Corner radius contract");
 };
 
@@ -318,8 +318,8 @@ settings.onmouseover = () => {
 };
 
 arcade.onmouseover = () => {
-  home_bar.style.borderTopRightRadius = "30px";
-  home_bar.style.borderBottomRightRadius = "30px";
+  home_bar.style.borderTopRightRadius = "35px";
+  home_bar.style.borderBottomRightRadius = "35px";
   //icon
   background.style.backgroundImage =
     "url(public/app_icons/icons8-apple-arcade-480.png)";
@@ -332,14 +332,14 @@ arcade.onmouseover = () => {
 };
 
 arcade.onmouseleave = () => {
-  home_bar.style.borderTopRightRadius = "45px";
-  home_bar.style.borderBottomRightRadius = "45px";
+  home_bar.style.borderTopRightRadius = "53px";
+  home_bar.style.borderBottomRightRadius = "53px";
   console.log("Corner radius contract");
 };
 
 home_bar.onmouseleave = () => {
-  home_bar.style.borderTopLeftRadius = "45px";
-  home_bar.style.borderBottomLeftRadius = "45px";
+  home_bar.style.borderTopLeftRadius = "53px";
+  home_bar.style.borderBottomLeftRadius = "53px";
   //Change background back to default
   background.style.backgroundPosition = "center";
   background.style.backgroundSize = "cover";
