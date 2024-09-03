@@ -101,6 +101,7 @@ const folder_open = document.getElementById("app_folder_open");
 //Folder inner
 
 //row 1
+const close_button = document.getElementById("close_button");
 const mac = document.getElementById("mac");
 const ios = document.getElementById("ios");
 const findmy = document.getElementById("findmy");
@@ -181,6 +182,15 @@ for (let i = 0; i < app_icon.length; i++) {
 for (let i = 0; i < app_icon_scroll.length; i++) {
   app_icon_scroll[i].tabIndex = 0;
 }
+
+for (let i = 0; i < app_icon_no_sound.length; i++) {
+  app_icon_no_sound[i].tabIndex = 0;
+}
+
+// prevent right click
+document.addEventListener("contextmenu", (event) => {
+  event.preventDefault();
+});
 
 window.onscroll = function () {
   scrollFunction();
@@ -366,19 +376,20 @@ home_bar.onmouseleave = () => {
 //arrow
 arrow_up.onmouseover = () => {
   arrow_up.style.cursor = "pointer";
-}
+  arrow_up.style.pointerEvents = "all";
+};
 
 arrow_up.onclick = () => {
   scroll_container.scrollIntoView();
-}
+};
 
 arrow_text.onmouseover = () => {
   arrow_text.style.cursor = "pointer";
-}
+};
 
 arrow_text.onclick = () => {
   scroll_container.scrollIntoView();
-}
+};
 
 //folder
 app_folder.onclick = () => {
@@ -423,6 +434,15 @@ folder_open.onmouseleave = () => {
   home_bar.style.filter = "brightness(100%)";
   console.log("folder closed");
 };
+
+//Enter key support
+
+//Enter = onClick event
+app_folder.addEventListener("keypress", function (event) {
+  if (event.key === "Enter") {
+    app_folder.click();
+  }
+});
 
 //Touchscreen support
 scroll_container.ontouchstart = () => {
@@ -738,6 +758,52 @@ wiki.addEventListener("keypress", function (event) {
 });
 
 /* folder inner */
+close_button.onclick = () => {
+  folder_back.style.pointerEvents = "none";
+  folder_open.style.opacity = "0";
+  folder_open.style.pointerEvents = "none";
+  background.style.filter = "brightness(100%)";
+  if (
+    window.matchMedia &&
+    window.matchMedia("(prefers-color-scheme: dark)").matches
+  ) {
+    body.style.background = "rgb(38, 38, 38)";
+  }
+  if (
+    window.matchMedia &&
+    window.matchMedia("(prefers-color-scheme: light)").matches
+  ) {
+    body.style.background = "rgba(255, 255, 255, 0.94)";
+  }
+  home_bar.style.filter = "brightness(100%)";
+  console.log("folder closed");
+};
+
+//Enter = onClick event
+close_button.addEventListener("keypress", function (event) {
+  if (event.key === "Enter") {
+    event.preventDefault();
+    folder_back.style.pointerEvents = "none";
+    folder_open.style.opacity = "0";
+    folder_open.style.pointerEvents = "none";
+    background.style.filter = "brightness(100%)";
+    if (
+      window.matchMedia &&
+      window.matchMedia("(prefers-color-scheme: dark)").matches
+    ) {
+      body.style.background = "rgb(38, 38, 38)";
+    }
+    if (
+      window.matchMedia &&
+      window.matchMedia("(prefers-color-scheme: light)").matches
+    ) {
+      body.style.background = "rgba(255, 255, 255, 0.94)";
+    }
+    home_bar.style.filter = "brightness(100%)";
+    console.log("folder closed");
+  }
+});
+
 mac.onclick = () => {
   location.href = "https://www.apple.com/ca/macos/sonoma/";
 };
