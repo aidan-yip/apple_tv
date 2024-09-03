@@ -401,7 +401,8 @@ img {
 #google,
 #apple,
 #wiki,
-#airpods {
+#airpods,
+#close_button {
   background: rgb(233, 233, 233);
   background: linear-gradient(
     0deg,
@@ -603,6 +604,10 @@ img {
 
 #airpods_img {
   width: 37%;
+}
+
+#close_img {
+  width: 43%;
 }
 
 /* hover */

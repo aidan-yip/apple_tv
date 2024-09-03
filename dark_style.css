@@ -159,7 +159,8 @@
 
   #apple_tv,
   #mac,
-  #ios {
+  #ios,
+  #close_button {
     background: rgb(25, 25, 25);
     background: linear-gradient(
       0deg,
