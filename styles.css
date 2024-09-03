@@ -441,7 +441,7 @@ img {
 }
 
 #pq {
-  background-color: rgb(213, 255, 252);
+  background-color: #d5fffc;
 }
 
 #pq_img {
@@ -641,6 +641,7 @@ img {
   }
 
   #app_folder_open {
+    height: 60%;
     padding: 3%;
     gap: 4%;
     row-gap: 5%;
@@ -690,7 +691,7 @@ img {
   }
 
   #app_folder_open {
-    height: 40%;
+    height: 30%;
   }
 
   .app_icon_scroll {

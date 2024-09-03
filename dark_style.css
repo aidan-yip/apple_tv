@@ -79,7 +79,6 @@
   #facebook,
   #twitter,
   #google,
-  #pq,
   #spotify,
   #soundcloud,
   #band,
@@ -98,8 +97,22 @@
     );
   }
 
+  #pq {
+    background: rgb(0, 22, 16);
+    background: linear-gradient(
+      0deg,
+      rgba(0, 22, 16, 1) 0%,
+      rgba(14, 53, 54, 1) 100%
+    );
+  }
+
   #party {
-    background: #005e45;
+    background: rgb(0, 82, 59);
+    background: linear-gradient(
+      0deg,
+      rgba(0, 82, 59, 1) 0%,
+      rgba(39, 156, 124, 1) 100%
+    );
   }
 
   #github {
