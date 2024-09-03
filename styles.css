@@ -139,9 +139,20 @@ body {
   transform: translateZ(20px);
 }
 
+#arrow_up {
+  width: 3%;
+  height: 35px;
+  z-index: 4;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 36%;
+  opacity: 70%;
+}
+
 #color_input {
   width: 50%;
-  height: 60%;
+  height: 70%;
   border: solid 3px #212121;
   border-radius: 10px;
   transform: translateZ(20px);
@@ -154,6 +165,7 @@ body {
 
 #background {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   width: 100vw;
   height: 90vh;
@@ -704,6 +716,10 @@ img {
 
   #volume {
     display: none;
+  }
+
+  #color_input {
+    height: 50%;
   }
 
   input[type="range"] {
