@@ -70,29 +70,27 @@ const arcade = document.getElementById("arcade");
 
 //row 1
 const youtube = document.getElementById("youtube");
-const instagram = document.getElementById("instagram");
-const twitter = document.getElementById("twitter");
-const facebook = document.getElementById("facebook");
 const google = document.getElementById("google");
+const instagram = document.getElementById("instagram");
+const facebook = document.getElementById("facebook");
+const twitter = document.getElementById("twitter");
 
 //row 2
 const music = document.getElementById("music");
 const podcasts = document.getElementById("podcasts");
-const spotify = document.getElementById("spotify");
 const soundcloud = document.getElementById("soundcloud");
 const band = document.getElementById("band");
+const spotify = document.getElementById("spotify");
 
 //row 3
 const keynote = document.getElementById("keynote");
-const pq = document.getElementById("pq");
-const party = document.getElementById("party");
+const pages = document.getElementById("pages");
+const findmy = document.getElementById("findmy");
 
-const github = document.getElementById("github");
 
 //row 4
+const github = document.getElementById("github");
 const apple = document.getElementById("apple");
-const airpods = document.getElementById("airpods");
-const apple_tv = document.getElementById("apple_tv");
 
 //folder
 const folder_back = document.getElementById("folder_back");
@@ -103,10 +101,12 @@ const folder_open = document.getElementById("app_folder_open");
 
 //row 1
 const close_button = document.getElementById("close_button");
+const pq = document.getElementById("pq");
+const party = document.getElementById("party");
+//row 2
 const mac = document.getElementById("mac");
 const ios = document.getElementById("ios");
-const findmy = document.getElementById("findmy");
-//row 2
+const airpods = document.getElementById("airpods");
 //row 3
 const newave = document.getElementById("newave");
 const skrem = document.getElementById("skrem");
@@ -650,7 +650,7 @@ podcasts.addEventListener("keypress", function (event) {
 });
 
 spotify.onclick = () => {
-  location.href = "https://open.spotify.com/artist/5Aq8y8dTIBYzng6ZZucQQ1";
+  location.href = "https://spotify.com";
 };
 
 //Enter = onClick event
@@ -670,7 +670,7 @@ soundcloud.addEventListener("keypress", function (event) {
 });
 
 soundcloud.onclick = () => {
-  location.href = "https://soundcloud.com/newaveoceans";
+  location.href = "https://soundcloud.com";
 };
 
 band.addEventListener("keypress", function (event) {
@@ -681,7 +681,7 @@ band.addEventListener("keypress", function (event) {
 });
 
 band.onclick = () => {
-  location.href = "https://newaveoceans.bandcamp.com";
+  location.href = "https://bandcamp.com";
 };
 
 /* row 3 */
@@ -705,7 +705,19 @@ keynote.onclick = () => {
 keynote.addEventListener("keypress", function (event) {
   if (event.key === "Enter") {
     event.preventDefault();
-    pq.click();
+    keynote.click();
+  }
+});
+
+pages.onclick = () => {
+  location.href = "https://www.icloud.com/pages";
+};
+
+//Enter = onClick event
+pages.addEventListener("keypress", function (event) {
+  if (event.key === "Enter") {
+    event.preventDefault();
+    pages.click();
   }
 });
 

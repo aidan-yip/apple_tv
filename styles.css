@@ -621,6 +621,19 @@ img {
   width: 50%;
 }
 
+#pages {
+  background: rgb(255, 137, 15);
+  background: linear-gradient(
+    0deg,
+    rgba(255, 137, 15, 1) 0%,
+    rgba(255, 187, 74, 1) 100%
+  );
+}
+
+#pages_img {
+  width: 49%;
+}
+
 /* hover */
 .app_icon:hover {
   cursor: pointer;
