@@ -402,7 +402,9 @@ img {
 #apple,
 #wiki,
 #airpods,
-#close_button {
+#close_button,
+#keynote,
+#band {
   background: rgb(233, 233, 233);
   background: linear-gradient(
     0deg,
@@ -513,10 +515,6 @@ img {
   width: 40%;
 }
 
-#band {
-  background-color: rgb(243, 248, 251);
-}
-
 #podcasts {
   background: rgb(146, 0, 231);
   background: linear-gradient(
@@ -608,6 +606,19 @@ img {
 
 #close_img {
   width: 43%;
+}
+
+#keynote {
+  background: rgb(34, 135, 251);
+  background: linear-gradient(
+    0deg,
+    rgba(34, 135, 251, 1) 0%,
+    rgba(109, 200, 255, 1) 100%
+  );
+}
+
+#keynote_img {
+  width: 50%;
 }
 
 /* hover */

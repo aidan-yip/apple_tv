@@ -83,6 +83,7 @@ const soundcloud = document.getElementById("soundcloud");
 const band = document.getElementById("band");
 
 //row 3
+const keynote = document.getElementById("keynote");
 const pq = document.getElementById("pq");
 const party = document.getElementById("party");
 
@@ -690,6 +691,18 @@ pq.onclick = () => {
 
 //Enter = onClick event
 pq.addEventListener("keypress", function (event) {
+  if (event.key === "Enter") {
+    event.preventDefault();
+    pq.click();
+  }
+});
+
+keynote.onclick = () => {
+  location.href = "https://www.icloud.com/keynote";
+};
+
+//Enter = onClick event
+keynote.addEventListener("keypress", function (event) {
   if (event.key === "Enter") {
     event.preventDefault();
     pq.click();
