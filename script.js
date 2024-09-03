@@ -19,14 +19,25 @@ function check_mobile() {
 const arrow_up = document.getElementById("arrow_up");
 const arrow_text = document.getElementById("arrow_text");
 
+//images global
+const images = document.querySelectorAll("img");
+
 let isMobile =
   /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
     navigator.userAgent
   );
 
+function rotate_alert() {
+  alert("Please rotate to Landscape!");
+}
+
 if (isMobile) {
   if (window.innerHeight > window.innerWidth) {
-    alert("Please rotate to Landscape!");
+    const myTimeout = setTimeout(rotate_alert, 2000);
+  }
+  if (window.innerWidth > window.innerHeight) {
+    //icon width mobile
+    images.style.width = "100%";
   }
   arrow_up.style.display = "none";
   arrow_text.style.display = "none";
@@ -49,9 +60,6 @@ const home_bar = document.getElementById("home_bar");
 const app_icon = document.getElementsByClassName("app_icon");
 const app_icon_scroll = document.getElementsByClassName("app_icon_scroll");
 const app_icon_no_sound = document.getElementsByClassName("app_icon_no_sound");
-
-//images global
-const images = document.querySelectorAll("img");
 
 //images
 const apple_img = document.getElementById("apple_img");
@@ -86,7 +94,6 @@ const spotify = document.getElementById("spotify");
 const keynote = document.getElementById("keynote");
 const pages = document.getElementById("pages");
 const findmy = document.getElementById("findmy");
-
 
 //row 4
 const github = document.getElementById("github");
