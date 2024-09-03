@@ -15,6 +15,9 @@ function check_mobile() {
   }
 }
 
+//Arrow
+const arrow_up = document.getElementById("arrow_up");
+
 let isMobile =
   /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
     navigator.userAgent
@@ -24,6 +27,7 @@ if (isMobile) {
   if (window.innerHeight > window.innerWidth) {
     alert("Please rotate to Landscape!");
   }
+  arrow_up.style.display = "none";
   console.log("Mobile device detected");
 }
 
@@ -356,6 +360,11 @@ home_bar.onmouseleave = () => {
 };
 
 //Link onclick events
+
+//arrow
+arrow_up.onmouseover = () => {
+  arrow_up.style.cursor = "pointer";
+}
 
 //folder
 app_folder.onclick = () => {
