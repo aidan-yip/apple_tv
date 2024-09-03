@@ -15,8 +15,9 @@ function check_mobile() {
   }
 }
 
-//Arrow
+//Arrow and arrow text
 const arrow_up = document.getElementById("arrow_up");
+const arrow_text = document.getElementById("arrow_text");
 
 let isMobile =
   /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
@@ -28,6 +29,7 @@ if (isMobile) {
     alert("Please rotate to Landscape!");
   }
   arrow_up.style.display = "none";
+  arrow_text.style.display = "none";
   console.log("Mobile device detected");
 }
 
@@ -359,11 +361,23 @@ home_bar.onmouseleave = () => {
   console.log("Reset Homebar");
 };
 
-//Link onclick events
+//Link onclick and mouse events
 
 //arrow
 arrow_up.onmouseover = () => {
   arrow_up.style.cursor = "pointer";
+}
+
+arrow_up.onclick = () => {
+  scroll_container.scrollIntoView();
+}
+
+arrow_text.onmouseover = () => {
+  arrow_text.style.cursor = "pointer";
+}
+
+arrow_text.onclick = () => {
+  scroll_container.scrollIntoView();
 }
 
 //folder
