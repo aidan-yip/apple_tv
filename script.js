@@ -195,6 +195,15 @@ for (let i = 0; i < app_icon_no_sound.length; i++) {
   app_icon_no_sound[i].tabIndex = 0;
 }
 
+//no cursor on icons
+for (let i = 0; i < app_icon.length; i++) {
+  app_icon[i].style.cursor = "none";
+}
+
+for (let i = 0; i < app_icon_scroll.length; i++) {
+  app_icon_scroll[i].style.cursor = "none";
+}
+
 // prevent right click
 document.addEventListener("contextmenu", (event) => {
   event.preventDefault();
