@@ -195,6 +195,16 @@ for (let i = 0; i < app_icon_no_sound.length; i++) {
   app_icon_no_sound[i].tabIndex = 0;
 }
 
+//cursor style normal
+for (let i = 0; i < app_icon_no_sound.length; i++) {
+  app_icon_no_sound[i].cursor = "default";
+}
+
+//color input
+color_input.onmouseover = () => {
+  color_input.style.cursor = "copy";
+};
+
 //no cursor on icons
 for (let i = 0; i < app_icon.length; i++) {
   app_icon[i].style.cursor = "none";
